@@ -1,0 +1,27 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(255, 255, 255);
+    position: fixed;
+    bottom: 0;
+    height: 10%;
+    width: 100%;
+    background-color: #332e04;
+    padding-top: 3%;
+    border-top: #fff 1px solid;
+    font-family: 'Raleway';
+}
+
+footer > p{
+    margin: 0 10% 2% 10%;
+}
+
+@media (max-width: 488px) {
+    footer{
+        display: block;
+        text-align: center;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        font-size: 12px;
+    }
+}

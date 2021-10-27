@@ -1,0 +1,52 @@
+.app-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input-field{
+    animation: fadeIn ease 2s;
+    display: flex;
+    margin-top: 50%;
+}
+
+@keyframes fadeIn{
+    0% {
+      opacity:0;
+    }
+    100% {
+      opacity:1;
+    }
+}
+
+#input-search{
+    background: transparent;
+    height: 25px;
+    border-radius: 5px;
+    outline: none;
+    border: #ffffff 1px solid;
+    padding: 5px;
+    font-family: 'Raleway';
+    font-weigh : 500;
+    
+}
+
+#input-search::placeholder{
+    color: #c4c4c4;
+    padding: 0 5px;
+}
+
+#btn-search{
+    border: none;
+    width: 40px;
+    border-radius: 5px;
+    margin-bottom: 1px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Raleway';
+    font-weight: 700;
+}
+
+#btn-search:hover{
+    background: rgb(185, 185, 185);
+}

@@ -1,0 +1,173 @@
+.pokemon-card{
+    display: block;
+    border-radius: 15px;
+    width: 200px;
+}
+
+.pokemon-card:hover{
+    cursor: pointer;
+}
+
+.pokemon-img-container{
+    background: #9A9795;
+    border-radius: 15px;
+    max-width: 150px;
+    max-height: 150px;
+    margin: 0 auto;
+}
+
+.pokemon-img{
+    width: 150px;
+    height: 150px;
+}
+
+.pokemon-img:hover{
+    margin-left: -15px;
+    margin-top: 10px;
+}
+
+.pokemon-types{
+    display: flex;
+}
+
+.pokemon-type-text{
+    margin-right: 10px;
+    border-radius: 5px;
+    text-transform: capitalize;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-top{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 5px 0;
+    color: rgb(255, 255, 255);
+}
+
+.card-bottom, .card-top{
+    margin: 0 25px;
+}
+
+.types{
+    text-align: start;
+}
+
+.card-top h3{
+    text-transform: capitalize;
+}
+
+@media (max-width: 419px){
+    .pokemon-img-container{
+        width: 60vw;
+        height: auto;
+        margin-top: 20px;
+    }
+    .pokemon-card{
+        margin: 0 auto;
+        padding: 0;
+    }
+}
+
+#grass{
+    background-color: #10B921;
+    padding: 5px;
+}
+
+#poison{
+    background-color: #5B18B0;
+    padding: 5px;
+}
+
+#fire{
+    background-color: #FDA015;
+    padding: 5px;
+}
+
+#flying{
+    background-color: #1B18B0;
+    padding: 5px;
+}
+
+#water{
+    background-color: #15C5FD;
+    padding: 5px;
+}
+
+#bug{
+    background-color: #B2CA22;
+    padding: 5px;
+}
+
+#normal{
+    background-color: #777777;
+    padding: 5px;
+}
+
+#electric{
+    background-color: #FEF517;
+    padding: 5px;
+}
+
+#ground{
+    background-color: #B06A18;
+    padding: 5px;
+}
+
+#fairy{
+    background-color: #F54097;
+    padding: 5px;
+}
+
+#psychic{
+    background-color: #BB7070;
+    padding: 5px;
+}
+
+#fighting{
+    background-color: #B01818;
+    padding: 5px;
+}
+
+#steel{
+    background-color: #3A3333;
+    padding: 5px;
+}
+
+#ice{
+    background-color: #66ABA7;
+    padding: 5px;
+}
+
+#ghost{
+    background-color: #3B2A51;
+    padding: 5px;
+}
+
+#rock{
+    background-color: #9F8F8F;
+    padding: 5px;
+}
+
+#dragon{
+    background-color: #2D0264;
+    padding: 5px;
+}
+
+#dark{
+    background-color: #562424;
+    padding: 5px;
+}
+
+
+
+/* Ganbiara do card */
+
+.cardDiv{
+    display: none;
+}
