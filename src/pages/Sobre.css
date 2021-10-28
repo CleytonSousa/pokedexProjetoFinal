@@ -1,24 +1,12 @@
-.primeiroTitulo {
-
-  text-align: center;
-  font-family: 'Raleway';
-  font-weight: 700;
-   margin-top: 1%;
 
 
-}
-
-.segundoTitulo {
-
-  text-align: center;
-  margin-top: 2.5%;
-}
-
-.imagens {
+.imagem1 {
 
   float: left;
-  margin-left: 5.5%;
+  margin-left: 10%;
   width: 20%;
+  margin-top: 7%;
+
 
 }
 
@@ -27,34 +15,74 @@
  
   
   width: 71%;
-  top: 30%;
+  margin-top: 35%;
+
+}
+
+h1,
+p,
+h3 {
+
+   color: #FFFFFF;
+  font-family: Raleway;
+}
+
+.imagem2 {
+
+  float: left;
+  margin-left: 12%;
+  width: 20%;
+  margin-top: 7%;
+  
 }
 
 .segundaFoto {
   
   width: 71%;
-  top: 30%;
+  margin-top: 35%;
+
+
+}
+
+.imagem3 {
+
+  float: left;
+  margin-left: 10%;
+  width: 20%;
+  margin-top: 7%;
 
 }
 
 .terceiraFoto {
 
   width: 71%;
-  top: 30%;
+  margin-top: 35%;
+
 
 }
 
-.nomePrimeiro {
+.nomeTerceiro  {
 
-  float: left;
-  margin-left: 18%;
-  margin-top: 0.5%;
+  margin-left: 8%;
 }
+
+
+
 
 .linkedinFoto {
 
-  width: 61px;
-  height: 61px;
+  width: 50px;
+  height: 50px;
+  margin-left: -21%;
+  margin-top: 4%;
 
 
+
+}
+
+.githubFoto {
+
+  width: 50px;
+  height: 50px;
+  margin-left: 10%;
 }

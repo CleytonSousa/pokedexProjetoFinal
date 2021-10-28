@@ -9,7 +9,7 @@ import Sobre from './pages/Sobre'
 import './index.css'
 ReactDOM.render(
   <React.StrictMode>
-      <Home />
+      <Sobre />
   </React.StrictMode>,
   document.getElementById('root')
 );
