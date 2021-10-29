@@ -41,6 +41,7 @@ export default function Home(){
                 <Pokedex pokemons={pokemons}/>
             </main>
         }
+
         <Footer />
     </section>
     )

@@ -1,0 +1,60 @@
+.primeiroTitulo {
+
+  text-align: center;
+  font-family: 'Raleway';
+  font-weight: 700;
+   margin-top: 1%;
+
+
+}
+
+.segundoTitulo {
+
+  text-align: center;
+  margin-top: 2.5%;
+}
+
+.imagens {
+
+  float: left;
+  margin-left: 5.5%;
+  width: 20%;
+
+}
+
+.primeiraFoto {
+
+ 
+  
+  width: 71%;
+  top: 30%;
+}
+
+.segundaFoto {
+  
+  width: 71%;
+  top: 30%;
+
+}
+
+.terceiraFoto {
+
+  width: 71%;
+  top: 30%;
+
+}
+
+.nomePrimeiro {
+
+  float: left;
+  margin-left: 18%;
+  margin-top: 0.5%;
+}
+
+.linkedinFoto {
+
+  width: 61px;
+  height: 61px;
+
+
+}

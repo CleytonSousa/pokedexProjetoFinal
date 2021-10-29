@@ -1,20 +1,20 @@
 import React from 'react'
+import './PokeDetails.css';
 
 function PokeDetails(props) {
     const {pokemon} = props
     return (
-        <div>
             <div>
-                <section>
+                <section className="PokeDatails">
                     <h1>{pokemon.name}</h1>
                     <p>
-                    {pokemon.types.map((type, idx) => {
-                        return(
-                            <p key={idx} id={type.type.name}>
-                                {type.type.name}
-                            </p>
-                        )
-                    })}
+                        {pokemon.types.map((type, idx) => {
+                            return(
+                                <p key={idx} id={type.type.name}>
+                                    {type.type.name}
+                                </p>
+                            )
+                        })}
                     </p>
                     <p>{pokemon.stats[0].stat.name}: {pokemon.stats[0].base_stat}</p>
                     <p>{pokemon.stats[1].stat.name}: {pokemon.stats[1].base_stat}</p>
@@ -25,9 +25,6 @@ function PokeDetails(props) {
                 </section>
 
             </div>
-            <div></div>
-            <div></div>
-        </div>
     )
 }
 

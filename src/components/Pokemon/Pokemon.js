@@ -35,7 +35,7 @@ const Pokemon = (props) => {
             </div>
            <div className="card-body">
                 <div className="card-top">
-                    <div>N°{pokemon.id}</div>
+                    {/* <div>N°{pokemon.id}</div> */}
                     <h3>{pokemon.name}</h3>
                 </div>
                 <div className='card-bottom'>
