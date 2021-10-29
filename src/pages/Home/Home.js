@@ -1,10 +1,10 @@
 import React from "react";
-import Footer from "../components/Footer/Footer";
-import NavMenu from "../components/Menu/Menu";
-import Pokedex from "../components/Pokedex/Pokex";
-import SearchPokemon from '../components/SearchPokemon/SearchPokemon'
-import { getPokemonData, getPokemons } from "../server/api";
-import Load from '../components/LoadScreen/Load'
+import Footer from "../../components/Footer/Footer";
+import NavMenu from "../../components/Menu/Menu";
+import Pokedex from "../../components/Pokedex/Pokex";
+import SearchPokemon from '../../components/SearchPokemon/SearchPokemon'
+import { getPokemonData, getPokemons } from "../../server/api";
+import Load from '../../components/LoadScreen/Load'
 import './Home.css'
 
 const {useState, useEffect} = React;

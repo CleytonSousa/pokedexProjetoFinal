@@ -1,11 +1,11 @@
 import React from 'react'
-import NavMenu from '../components/Menu/Menu'
-import Footer from '../components/Footer/Footer'
+import NavMenu from '../../components/Menu/Menu'
+import Footer from '../../components/Footer/Footer'
 import './Sobre.css'
-import ImagemPerfil1 from '../assets/Barbaha.png'
-import ImagemPerfil2 from '../assets/cleyton.png'
-import ImagemPerfil3 from '../assets/eliza.png'
-import ImagemLinkedin from '../assets/linkedin.png'
+import ImagemPerfil1 from '../../assets/Barbaha.png'
+import ImagemPerfil2 from '../../assets/cleyton.png'
+import ImagemPerfil3 from '../../assets/eliza.png'
+import ImagemLinkedin from '../../assets/linkedin.png'
 
 function Sobre() {
     return (

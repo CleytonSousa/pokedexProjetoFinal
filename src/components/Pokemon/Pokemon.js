@@ -1,8 +1,9 @@
 import React,{ useState, useEffect } from "react";
 import './Pokemon.css';
-import PokeDetails from "../PokeDetails/PokeDetails";
+import { useHistory } from "react-router";
 
 const Pokemon = (props) => {
+    const history = useHistory()
     const [id, setId] = useState()
     const { pokemon }= props
     const [click, setClick] = useState(false)
@@ -24,18 +25,16 @@ const Pokemon = (props) => {
         <div className='pokemon-card'>
             <div className="pokemon-img-container" onClick={() =>{
                     click ? setClick(false) : setClick(true)
-                    console.log(click)
                 }}>
                 <img
                 src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`}
                 alt={pokemon.name}
                 loading='lazy'
                 className="pokemon-img"
-                />
+                onClick={() => history.push(`/${pokemon.id}`)}/>
             </div>
            <div className="card-body">
                 <div className="card-top">
-                    {/* <div>N°{pokemon.id}</div> */}
                     <h3>{pokemon.name}</h3>
                 </div>
                 <div className='card-bottom'>
@@ -50,7 +49,7 @@ const Pokemon = (props) => {
                 </div>
                 </div>
             </div>
-            { click ? <PokeDetails pokemon={pokemon} /> : ''}
+            
         </div>
     )
 

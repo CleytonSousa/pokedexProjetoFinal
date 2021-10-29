@@ -1,0 +1,111 @@
+@keyframes colorChange {
+    from {
+      color: black;
+      background-color: white;
+    }
+    to {
+      color: white;
+      background-color: black;
+    }
+  }
+  
+  #ball {
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: 3s ease-in-out forwards open;
+  }
+  
+  #pokemon {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-size: cover;
+  }
+  
+  @keyframes open {
+    from {
+      height: 420px
+    }
+    to {
+      height: 800px
+    }
+  }
+  
+  #top-half {
+    background-color: red;
+    width: 400px;
+    top: 0;
+    height: 200px;
+    position: absolute;
+    border: 10px solid black;
+    border-bottom: 14px solid black;
+    border-radius: 400px 400px 0 0;
+  }
+  
+  #bottom-half {
+    background-color: white;
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    bottom: 0;
+    border: 10px solid black;
+    border-top: 14px solid black;
+    border-radius: 0 0 400px 400px;
+  }
+  
+  #center-click {
+    position: absolute;
+    bottom: -65px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 15px solid black;
+    border-radius: 50%;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+  }
+
+  #center-click-inner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-color: white;
+    width: 80px;
+    height: 80px;
+  }
+
+  #center-click-inner:hover {
+    animation: 3s ease-in-out both infinite toBlue;
+}
+  
+  @keyframes toBlue {
+    0% {
+      background-color: white;
+      border-color: black;
+    }
+    50% {
+      background-color: black;
+      border-color: white;
+    }
+    100% {
+      background-color: white;
+      border-color: black;
+    }
+  }
