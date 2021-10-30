@@ -4,15 +4,19 @@ export const Container = styled.div`
   display: flex;
   justify-content: space-evenly;
   height: 95vh;
+  color: #fff;
+  font-family: 'Raleway';
 
   .pokemonInfos{
       display: flex;
-      margin: 50px 0;
+      margin: 8% 0;
+      font-weight: 700;
 
     .types{
       display: flex;
       height: 40px;
       width: 100px;
+      text-transform: uppercase;
     }
   }
 
@@ -29,6 +33,8 @@ export const Container = styled.div`
   .moreInfos{
       align-self: flex-end;
       margin-bottom: 5rem;
+      font-weight: 700;
+      font-size: 16px;
   }
 `;
 
@@ -39,7 +45,8 @@ export const StatsDiv = styled.div `
 
 
     span{
-        height: 5px;
+        width: 25px;
+        height: 10px;
         background: #8BD192;
         align-self: center;
         margin: 0 15px;
