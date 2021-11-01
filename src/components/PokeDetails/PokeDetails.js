@@ -5,6 +5,9 @@ import axios from 'axios';
 import Load from '../LoadScreen/Load';
 import {Pokeball} from '../PokeballClick/PokeballClick'
 
+import NavMenu from "../Menu/Menu";
+import Footer from "../Footer/Footer"
+
 // style
 import {
     Types,
@@ -12,7 +15,6 @@ import {
     StatsDiv,
     Button
 } from './PokeDetailsStyle.js';
-import NavMenu from '../Menu/Menu.js';
 
 function PokeDetails(props) {
     // const {pokemon} = props
@@ -46,33 +48,32 @@ function PokeDetails(props) {
         const { name, id, species, height, weight, types } = pokemon;
         const fullImageUrl = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
         return (
-          <Container>
+          
+        <Container>
           {clickPoke ? <Pokeball /> : 
           
           <>
-          <Container>
-             <div className='pokemonInfos'>
-            <div>
+          <NavMenu />
+          {/* <Container> */}
+          section.container
+          <div className='pokemonInfos'>
                 <h1>
                 {(name)}
                 </h1>
-            <div className='types'>
-                <p style={{fontSize: '20px', marginTop: '5px'}}>Tipos: </p> {types.map((typeInfo) => {
-                const { type } = typeInfo;
-                const { name } = type;
-                return <Types id={name} key={name}> {`${name}`} </Types>;
-                })}
-            </div>
-            </div>
+              <div className='types'>
+                  <p style={{fontSize: '20px', marginTop: '5px'}}>Tipo: </p> {types.map((typeInfo) => {
+                  const { type } = typeInfo;
+                  const { name } = type;
+                  return <Types id={name} key={name}> {`${name}`} </Types>;
+                  })}
+              </div>
+          </div> {/*FIM DA DIV POKEMONINFOS */}
+
+          <div className='pokemonImage'>
+            {Load ? <img src={fullImageUrl} alt='pokemon' /> : ''}
           </div>
 
-            <div className='pokemonImage'>
-                
-                {Load ? <img src={fullImageUrl} alt='pokemon' /> : ''}
-            </div>
-
-            
-            <div className='moreInfos'>
+          <div className='moreInfos'>
                 <h3>Pokemon Info</h3>
                 <h1>
                 {species.name}
@@ -109,10 +110,11 @@ function PokeDetails(props) {
                     <p>SPEED:  {pokemon.stats[5].base_stat}</p>
                     <progress value={pokemon.stats[5].base_stat} max="130"></progress>
                 </StatsDiv>
-            </div> 
-          </Container>
+          </div> {/* FIM DIV MOREINFOS */}
+          <Footer />
+          {/* </Container> CONTAINER RETIRADO PARA TESTE */} 
           </>}
-          </Container>
+        </Container>
         );
       };
 
