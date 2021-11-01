@@ -3,7 +3,7 @@ import Home from './pages/Home/Home'
 import Geracao from './pages/Geracao/Geracao';
 import PokeDetails from './components/PokeDetails/PokeDetails';
 
-import { BrowserRouter, Route } from 'react-router-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import React from 'react'
 
@@ -12,6 +12,7 @@ function Routes() {
     return (
         <div>
             <BrowserRouter>
+                <Switch>
                 <Route path='/' exact component={Home} />
                 <Route path='/sobre' component={Sobre} />
                 <Route path='/geracao' component={Geracao} />
@@ -20,6 +21,7 @@ function Routes() {
                     path="/:pokemonId"
                     render={(props) => <PokeDetails {...props} />}
                     />
+                </Switch>
             </BrowserRouter>
         </div>
     )

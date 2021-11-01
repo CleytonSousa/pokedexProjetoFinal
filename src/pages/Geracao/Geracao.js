@@ -5,6 +5,7 @@ import SearchPokemon from '../../components/SearchPokemon/SearchPokemon'
 import { getPokemonData } from '../../server/api'
 import { useHistory } from 'react-router'
 import '../../components/Pokemon/Pokemon.css'
+import Load from '../../components/LoadScreen/Load'
 
 import axios from 'axios'
 
@@ -19,6 +20,7 @@ const Geracao = () => {
     const history = useHistory()
     const [gerId, setGerId] = useState(1)
     const [pokemonData, setPokemonData] = useState()
+    const [loading, setLoading] = useState(true)
 
 
     const getPokemonDataBaseInGeration = async () => {
@@ -34,9 +36,8 @@ const Geracao = () => {
         } catch (err) {
             console.log(err)
         }
+        setLoading(false)
     }
-
-
 
     useEffect(() => {
         getPokemonDataBaseInGeration()
@@ -48,6 +49,9 @@ const Geracao = () => {
             <NavMenu />
             <SearchPokemon />
             <main id='pokedexContainer'>
+                {loading ? <Load /> : 
+                <>
+                <main id='pokedexContainer'>
                 <Menu>
                     <button onClick={() => gerId === 1 ? setGerId(8) : setGerId(gerId - 1)}>Back</button>
                     <h1>Geração {gerId}</h1>
@@ -86,6 +90,9 @@ const Geracao = () => {
                         )
                     })}
                 </Container>
+            </main>
+                </>
+                }
             </main>
             <Footer />
         </div>
