@@ -3,7 +3,7 @@ import Home from './pages/Home/Home'
 import Geracao from './pages/Geracao/Geracao';
 import PokeDetails from './components/PokeDetails/PokeDetails';
 
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 
 import React from 'react'
 

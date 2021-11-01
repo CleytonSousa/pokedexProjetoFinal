@@ -12,6 +12,7 @@ import {
     StatsDiv,
     Button
 } from './PokeDetailsStyle.js';
+import NavMenu from '../Menu/Menu.js';
 
 function PokeDetails(props) {
     // const {pokemon} = props
