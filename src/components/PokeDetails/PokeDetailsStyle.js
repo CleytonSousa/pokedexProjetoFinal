@@ -36,6 +36,14 @@ export const StatsDiv = styled.div `
     display: flex;
     justify-content: flex-end;
     font-size: 20px;
+    
+    progress{
+      margin-left: 15px;
+    }
+
+    progress[value] {
+      height: 20px;
+    }
 
 
     span{

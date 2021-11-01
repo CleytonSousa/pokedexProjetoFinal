@@ -44,6 +44,7 @@ function SearchPokemon(){
 
     return(
         <div>
+        
         <main className="app-container">
             <div style={{display: 'block'}}>
 

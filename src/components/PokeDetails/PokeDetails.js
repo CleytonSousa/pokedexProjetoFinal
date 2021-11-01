@@ -3,7 +3,6 @@ import './PokeDetailsStyle.js';
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import Load from '../LoadScreen/Load';
-import { Link } from 'react-router-dom';
 import {Pokeball} from '../PokeballClick/PokeballClick'
 
 // style
@@ -30,22 +29,20 @@ function PokeDetails(props) {
           .then(function (response) {
             const { data } = response;
             setPokemon(data);
-            console.log(data)
           })
           .catch(function (error) {
-            console.log(error);
+            console.error(error);
           });
       }, [pokemonId]);
 
      setTimeout(() => {
-       console.log("test")
        setPokeClick(false)
-     }, 2500)
+     }, 1000)
 
 
 
       const generatePokemonJSX = (pokemon) => {
-        const { name, id, species, height, weight, types, sprites } = pokemon;
+        const { name, id, species, height, weight, types } = pokemon;
         const fullImageUrl = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
         return (
           <Container>
@@ -79,37 +76,37 @@ function PokeDetails(props) {
                 <h1>
                 {species.name}
                 </h1>
-                <h3>Height: {height} </h3>
-                <h3>Weight: {weight} </h3>
+                <h3>Tamanho: {height / 10 + "m"} </h3>
+                <h3>Peso: {weight / 10 + "Kg"} </h3>
 
                <StatsDiv>
                     <p>HP:  {pokemon.stats[0].base_stat}</p>
-                    <span></span>
+                    <progress value={pokemon.stats[0].base_stat} max="130"></progress>
                </StatsDiv>
 
                <StatsDiv>
-                <p>ATTACK:  {pokemon.stats[1].base_stat}</p>
-                    <span></span>
+                  <p>ATTACK:  {pokemon.stats[1].base_stat}</p>
+                   <progress value={pokemon.stats[1].base_stat} max="130"></progress>
                </StatsDiv>
 
                <StatsDiv>
                     <p>DEFENSE:  {pokemon.stats[2].base_stat}</p>
-                   <span></span>
+                    <progress value={pokemon.stats[2].base_stat} max="130"></progress>
                </StatsDiv>
 
                 <StatsDiv>
                     <p>SPECIAL-ATTACK:  {pokemon.stats[3].base_stat}</p>
-                    <span></span>
+                    <progress value={pokemon.stats[3].base_stat} max="130"></progress>
                 </StatsDiv>
 
                 <StatsDiv>
                     <p>SPECIAL-DEFENSE:  {pokemon.stats[4].base_stat}</p>
-                    <span style={{width: `${pokemon.stats[4].base_stat}`}}></span>
+                   <progress value={pokemon.stats[4].base_stat} max="130"></progress>
                 </StatsDiv>
 
                 <StatsDiv>
                     <p>SPEED:  {pokemon.stats[5].base_stat}</p>
-                    <span style={{width: ''}}></span>
+                    <progress value={pokemon.stats[5].base_stat} max="130"></progress>
                 </StatsDiv>
             </div> 
           </Container>
@@ -121,7 +118,7 @@ function PokeDetails(props) {
 
       return (
         <>
-          {pokemon === undefined && <><h1>Error, pokemon not found!</h1> <Load /> <button onClick={() => history.push('/')}>Return Home</button></>}
+          
           {pokemon !== undefined && pokemon && generatePokemonJSX(pokemon)}
           {pokemon === false && <h1> Pokemon not found</h1>}
     

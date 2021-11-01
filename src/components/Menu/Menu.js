@@ -19,15 +19,15 @@ function NavMenu(){
 
                 <div className={active ? 'navRespo' : 'noShow'} id="navRespo">
                 
-                    <a className="navItemRespo" href="#">HOME</a>
-                    <a className="navItemRespo" href="#">GERAÇÃO</a>
+                    <Link className="navItemRespo" to="/">HOME</Link>
+                    <Link className="navItemRespo" to="/geracao">GERAÇÃO</Link>
                     <a className="navItemRespo" href="#">CATEGORIA</a>
                     <Link className="navItemRespo" to='/sobre'>SOBRE</Link>
 
                 </div>
 
                     <Link to="/">HOME</Link>
-                    <a href="#">GERAÇÃO</a>
+                    <Link to="/geracao">GERAÇÃO</Link>
                     <a href="#">CATEGORIA</a>
                     <Link to='/sobre'>SOBRE</Link>
                 <input id="menu__toggle" type="checkbox" />
