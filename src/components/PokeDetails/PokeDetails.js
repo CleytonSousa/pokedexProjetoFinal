@@ -22,7 +22,6 @@ function PokeDetails(props) {
     const { params } = match;
     const { pokemonId } = params;
     const [pokemon, setPokemon] = useState(undefined);
-
     const [clickPoke, setPokeClick] = useState(true)
 
 
@@ -43,44 +42,40 @@ function PokeDetails(props) {
      }, 1000)
 
 
-
       const generatePokemonJSX = (pokemon) => {
         const { name, id, species, height, weight, types } = pokemon;
         const fullImageUrl = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
         return (
           
-        <Container>
-          {clickPoke ? <Pokeball /> : 
+          <Container>
+            {clickPoke ? <Pokeball /> : 
           
           <>
+
           <NavMenu />
-          {/* <Container> */}
-          section.container
-          <div className='pokemonInfos'>
-                <h1>
-                {(name)}
-                </h1>
+          <section className='pokemonInfos'>
+                <h1> {(name)} </h1>
               <div className='types'>
-                  <p style={{fontSize: '20px', marginTop: '5px'}}>Tipo: </p> {types.map((typeInfo) => {
-                  const { type } = typeInfo;
-                  const { name } = type;
-                  return <Types id={name} key={name}> {`${name}`} </Types>;
+                  <p style={{fontSize: '20px', marginTop: '5px'}}> Tipo: </p> 
+                    {types.map((typeInfo) => {
+                    const { type } = typeInfo;
+                    const { name } = type;
+
+                    return <Types id={name} key={name}> {`${name}`} </Types>;
                   })}
               </div>
-          </div> {/*FIM DA DIV POKEMONINFOS */}
 
-          <div className='pokemonImage'>
-            {Load ? <img src={fullImageUrl} alt='pokemon' /> : ''}
-          </div>
-
-          <div className='moreInfos'>
-                <h3>Pokemon Info</h3>
-                <h1>
-                {species.name}
-                </h1>
+              <div className="moreInfos">
                 <h3>Tamanho: {height / 10 + "m"} </h3>
                 <h3>Peso: {weight / 10 + "Kg"} </h3>
+              </div>
+          </section>
 
+          <section className='pokemonImage'>
+            {Load ? <img src={fullImageUrl} alt='pokemon' /> : ''}
+          </section>
+
+          <div className='about'>
                <StatsDiv>
                     <p>HP:  {pokemon.stats[0].base_stat}</p>
                     <progress value={pokemon.stats[0].base_stat} max="130"></progress>
@@ -110,14 +105,12 @@ function PokeDetails(props) {
                     <p>SPEED:  {pokemon.stats[5].base_stat}</p>
                     <progress value={pokemon.stats[5].base_stat} max="130"></progress>
                 </StatsDiv>
-          </div> {/* FIM DIV MOREINFOS */}
+          </div> 
           <Footer />
-          {/* </Container> CONTAINER RETIRADO PARA TESTE */} 
           </>}
         </Container>
         );
       };
-
 
       return (
         <>
@@ -127,7 +120,7 @@ function PokeDetails(props) {
     
           {pokemon !== undefined && (
             <Button variant="contained" onClick={() => history.push("/")}>
-              back to pokedex
+              X
             </Button>
           )}
         </>

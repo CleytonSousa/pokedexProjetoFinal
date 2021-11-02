@@ -2,21 +2,28 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   height: 95vh;
   color: #fff;
   font-family: 'Raleway';
+  text-transform: uppercase;
+  font-size: 16px;
 
   .pokemonInfos{
       display: flex;
       margin: 8% 0;
       font-weight: 700;
 
+    h1{
+      margin: 20% 0 3% 0;
+    }
+
     .types{
       display: flex;
       height: 40px;
       width: 100px;
-      text-transform: uppercase;
+      position: absolute;
+      margin-top: 55px;
     }
   }
 
@@ -27,14 +34,21 @@ export const Container = styled.div`
           width: 40vw;
           max-width: 500px;
       }
-      
   }
 
   .moreInfos{
+    align-self: flex-start;
+    font-weight: 700;
+    
+    margin: 95px 0;
+    position: absolute;
+  }
+
+  .about{
       align-self: flex-end;
-      margin-bottom: 5rem;
+      margin-bottom: 10rem;
       font-weight: 700;
-      font-size: 16px;
+      font-size: 16em;
   }
 `;
 
@@ -50,7 +64,6 @@ export const StatsDiv = styled.div `
     progress[value] {
       height: 20px;
     }
-
 
     span{
         width: 25px;
@@ -161,30 +174,14 @@ margin: 5px;
 `;
 
 export const Button = styled.button `
-background: #3d6fed;
-border: none;
-padding: 5px;
-cursor: pointer;
-position: relative;
-animation: come 2s linear 1;
-animation: cor 2s linear 4;
-
-@keyframes cor{
-  0%{background: #ff0000;}
-  50%{background: #dd1616;}
-  100%{}
-}
-
-@keyframes come {
-    0%{
-        right: 150px;
-    }
-    50%{
-        right: 80px;
-    }
-
-    100%{
-        right: 0;
-    }
-}
+  background: transparent;
+  color: #fff;
+  font-weight: 300;
+  font-size: 25px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  position: absolute;
+  top: 15%;
+  right: 8%;
 `;
