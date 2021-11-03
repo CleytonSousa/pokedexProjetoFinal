@@ -1,3 +1,7 @@
+*{
+  overflow: visible;
+}
+
 .HomePage{
     animation: fadeIn ease 2s;
     height: 90vh;

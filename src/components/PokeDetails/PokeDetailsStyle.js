@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.section`
   display: flex;
   justify-content: center;
   height: 95vh;
@@ -39,23 +39,136 @@ export const Container = styled.div`
   .moreInfos{
     align-self: flex-start;
     font-weight: 700;
-    
     margin: 95px 0;
     position: absolute;
   }
 
   .about{
       align-self: flex-end;
-      margin-bottom: 10rem;
+      margin: 5rem 5rem 10rem 5rem;
       font-weight: 700;
       font-size: 16em;
   }
+
+  .pokemonImage{
+      align-self: center;
+
+      img{
+          width: 40vw;
+          max-width: 500px;
+      }
+  }
+  
+  @media (max-width: 1030px) {
+    grid-template-columns: repeat(4, 2fr);
+    font-size: 16px;
+
+    .pokemonInfos{
+      margin: 8% 0;
+
+      h1{
+        margin: 50px 0 0 30px;
+        font-size: 25px;
+      }
+
+      .types{
+        margin: 80px 30px;
+      }
+
+      .moreInfos{
+        margin: 120px 0 0 30px;
+      }
+    }
+
+    .about{
+      margin: 5rem 3rem 10rem 2rem;
+    }
+
+    .pokemonImage{
+      img{
+          width: 38vw;
+      }
+    }
+
+  }
+
+
+  @media (max-width: 851px) {
+    .pokemonInfos{
+      margin: 8% 0 0 0;
+
+      h1{
+        margin: 50px 0 0 0;
+        font-size: 25px;
+      }
+
+      .types{
+        margin: 80px 0;
+      }
+
+      .moreInfos{
+        margin: 120px 0 0 0;
+      }
+    }
+
+    .about{
+      margin: 55px 10px 8rem 0;
+    }
+
+    .pokemonImage{
+      align-self: self-end;
+      padding-bottom: 180px;
+      margin-left: -200px;
+      img{
+          width: 38vw;
+      }
+    }
+  }
+
+  @media (max-width: 430px) {
+    overflow: hidden;
+    .pokemonInfos{
+      margin: 50px 0 0 0;
+      align-self: flex-start;
+
+      h1{
+        margin: 50px 0 0 0;
+        font-size: 25px;
+      }
+
+      .types{
+        margin: 80px 0;
+      }
+
+      .moreInfos{
+        margin: 120px 0 0 0;
+      }
+    }
+
+    .about{
+      margin: 10px 10px 8rem 50px;
+    }
+
+    .pokemonImage{
+      align-self: center;
+      padding-bottom: 200px;
+
+      img{
+          width: 50vw;
+          position: absolute;
+          margin-left: 100px;
+      }
+    }
+  }
+
 `;
+
+// CSS DAS BARRAS DE PROGRESSO DO POKEMON
 
 export const StatsDiv = styled.div `
     display: flex;
     justify-content: flex-end;
-    font-size: 20px;
+    font-size: 16px;
     
     progress{
       margin-left: 15px;
@@ -65,16 +178,10 @@ export const StatsDiv = styled.div `
       height: 20px;
     }
 
-    span{
-        width: 25px;
-        height: 10px;
-        background: #8BD192;
-        align-self: center;
-        margin: 0 15px;
-        border-radius: 5px;
-    }
 `;
 
+
+// CSS CARD TIPO DO POKEMON
 export const Types = styled.p `
 text-align: center;
 border-radius: 5px;
@@ -173,6 +280,7 @@ margin: 5px;
 }
 `;
 
+// CSS BOTÃO SAIR DE DETALHES
 export const Button = styled.button `
   background: transparent;
   color: #fff;
