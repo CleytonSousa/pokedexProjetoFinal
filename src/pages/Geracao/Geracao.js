@@ -58,9 +58,9 @@ const Geracao = () => {
                     <button onClick={() => gerId === 8 ? setGerId(1) : setGerId(gerId + 1)}>Next</button>
                 </Menu>
                 <Container>
-                    {pokemonData?.map((pokemon) => {
+                    {pokemonData?.map((pokemon, idx) => {
                         return (
-                            <CardContainer className='pokemon-card'>
+                            <CardContainer key={idx} className='pokemon-card'>
                                 <div className="pokemon-img-container">
                                     <img
                                         src={`https://cdn.traction.one/pokedex/pokemon/${pokemon?.id}.png`}

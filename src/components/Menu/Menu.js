@@ -34,7 +34,7 @@ function NavMenu(){
 
                 <label onClick={() => {
                     setMode(!active)
-                }} className="menu__btn" for="menu__toggle">
+                }} className="menu__btn" htmlFor="menu__toggle">
                     <span></span>
                 </label>
 

@@ -13,14 +13,14 @@ function Routes() {
         <div>
             <BrowserRouter>
                 <Switch>
-                <Route path='/' exact component={Home} />
-                <Route path='/sobre' component={Sobre} />
-                <Route path='/geracao' component={Geracao} />
-                <Route
-                    exact
-                    path="/:pokemonId"
-                    render={(props) => <PokeDetails {...props} />}
-                    />
+                    <Route path='/' exact component={Home} />
+                    <Route path='/sobre' exact component={Sobre} />
+                    <Route path='/geracao' exact component={Geracao} />
+                    <Route
+                        exact
+                        path="/:pokemonId"
+                        render={(props) => <PokeDetails {...props} />}
+                        />
                 </Switch>
             </BrowserRouter>
         </div>
