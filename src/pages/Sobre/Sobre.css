@@ -1,24 +1,24 @@
 .primeiroTitulo {
-
+  padding-top: 9%;
+  text-transform: uppercase;
   text-align: center;
-  font-family: 'Raleway';
-  font-weight: 700;
-   margin-top: 1%;
-
-
+  font-size: 150%;
 }
+
 
 .segundoTitulo {
 
   text-align: center;
-  margin-top: 2.5%;
+  padding-top: 3%;
 }
 
-.imagens {
+.imagem1 {
 
   float: left;
-  margin-left: 5.5%;
+  margin-left: 10%;
   width: 20%;
+  margin-top: 4%;
+
 
 }
 
@@ -27,34 +27,347 @@
  
   
   width: 71%;
-  top: 30%;
+
+
+}
+
+h1,
+p,
+h3 {
+
+   color: #FFFFFF;
+  font-family: Raleway;
+}
+
+
+.imagem2 {
+
+  float: left;
+  margin-left: 12%;
+  width: 20%;
+  margin-top: 4%;
+  
 }
 
 .segundaFoto {
   
   width: 71%;
-  top: 30%;
+
+
+
+}
+
+.imagem3 {
+
+  float: left;
+  margin-left: 10%;
+  width: 20%;
+  margin-top: 4%;
 
 }
 
 .terceiraFoto {
 
   width: 71%;
-  top: 30%;
+ 
+
 
 }
 
-.nomePrimeiro {
+.nomeTerceiro  {
 
-  float: left;
-  margin-left: 18%;
-  margin-top: 0.5%;
+  margin-left: 8%;
+}
+
+
+
+
+.linkedinFoto {
+
+  width: 19%; 
+  margin-left: 13%;
+  margin-top: -20.5%;
+  display: flex;
+  border-radius: 20.5%;
+
+}
+
+.githubFoto {
+
+
+  width: 19%;
+  margin-left: 9%;
+  border-radius: 20%;
+
+
+}
+
+.redesSociais {
+
+  margin-top: 5%;
+
+}
+
+@media (max-width: 1072px) {
+  
+.container{
+      display: block;
+      text-align: center;
+      padding-top: 12%;
+      padding-bottom: 5%;
+      font-size: 15px;
+  
+  }
+  .container1{
+    display: flex;
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-right: 0%;
+  
+   }
+
+   .container2 {
+    display: flex;
+    text-align: center;
+    padding-top: 0%;
+    padding-bottom: 0%;
+    padding-right: 0%;
+  
+  
+   }
+   .container3 {
+    display: flex;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 22%;
+    padding-right: 0%;
+  
+   }
+
+   .imagem1 {
+     margin-left: 25%;
+     width: 50%;
+     height: 40%;
+     
+  }
+  .githubFoto{
+    display: inline;
+    margin-right: -25%;
+  }
+
+  .linkedinFoto {
+
+
+    margin-left: 28%;
+    margin-bottom: 1%;
+  }
+
+  .imagem2 {
+    margin-left: 25%;
+    width: 50%;
+    height: 40%;
+    
+ }
+
+ .imagem3 {
+  margin-left: 25%;
+  width: 50%;
+  height: 40%;
+  
+}
+
+.nomeTerceiro {
+  margin-right: 9%;
+}
+
+}
+
+
+
+
+
+
+
+
+@media (max-width: 1024px)  {
+
+  .container{
+    display: block;
+    text-align: center;
+    padding-top: 12%;
+    padding-bottom: 5%;
+    font-size: 15px;
+
+}
+.container1{
+  display: flex;
+  text-align: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-right: 0%;
+
+ }
+
+ .container2 {
+  display: flex;
+  text-align: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-right: 0%;
+
+
+ }
+ .container3 {
+  display: flex;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 22%;
+  padding-right: 0%;
+
+ }
+
+ .imagem1 {
+   margin-left: 25%;
+   width: 50%;
+   height: 40%;
+   
+}
+.githubFoto{
+
+  display: inline;
+  margin-left: 9%;
+  width: 19.5%;
+ 
 }
 
 .linkedinFoto {
 
-  width: 61px;
-  height: 61px;
+  display: left;
+  width: 19.5%;
+  margin-bottom: 1%;
+
+
+  
+}
+
+.imagem2 {
+  margin-left: 25%;
+  width: 50%;
+  height: 40%;
+  
+}
+
+.imagem3 {
+margin-left: 25%;
+width: 50%;
+height: 40%;
+
+}
+
+.nomeTerceiro {
+margin-right: 9%;
+}
 
 
 }
+
+
+
+
+
+
+
+
+
+@media (max-width: 850px)  {
+
+  .container{
+    display: block;
+    text-align: center;
+    padding-top: 12%;
+    padding-bottom: 5%;
+    font-size: 15px;
+
+}
+.container1{
+  display: flex;
+  text-align: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-right: 0%;
+
+ }
+
+ .container2 {
+  display: flex;
+  text-align: center;
+  padding-top: 0%;
+  padding-bottom: 0%;
+  padding-right: 0%;
+
+
+ }
+ .container3 {
+  display: flex;
+  text-align: center;
+  padding-top: 2%;
+  padding-bottom: 22%;
+  padding-right: 0%;
+
+ }
+
+ .imagem1 {
+   margin-left: 25%;
+   width: 50%;
+   height: 40%;
+   
+}
+.githubFoto{
+
+  display: inline;
+  margin-left: 1.5%;
+  margin-top: 1%;
+  width: 19.5%;
+ 
+}
+
+.linkedinFoto {
+
+  display: left;
+  width: 19.5%;
+  margin-right: 1%;
+  margin-bottom: 2%;
+
+
+  
+}
+
+.imagem2 {
+  margin-left: 25%;
+  width: 50%;
+  height: 40%;
+  
+}
+
+.imagem3 {
+margin-left: 25%;
+width: 50%;
+height: 40%;
+
+}
+
+.nomeTerceiro {
+margin-right: 9%;
+}
+
+
+}
+
+
+
+
+
+
+
+
