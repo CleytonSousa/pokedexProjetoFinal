@@ -16,12 +16,22 @@ footer > p{
     margin: 0 10% 2% 10%;
 }
 
+@media (max-width: 850px) {
+    footer{
+        display: block;
+        text-align: center;
+        padding-bottom: 7%;
+        font-size: 12px;
+        position: relative;
+    }
+}
+
 @media (max-width: 488px) {
     footer{
         display: block;
         text-align: center;
         padding-top: 5%;
-        padding-bottom: 5%;
+        /* padding-bottom: 5%; */
         font-size: 12px;
     }
 }

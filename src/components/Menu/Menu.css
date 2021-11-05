@@ -158,7 +158,7 @@ a:hover{
     .navRespo{
         display: flex;
         margin-top: 62%;
-        width: 380px;
+        width: 100vw;
         background-color: #523c34;
         margin-left: -20%;
     }
@@ -174,3 +174,5 @@ a:hover{
         width: 8%;
     }
 }
+
+

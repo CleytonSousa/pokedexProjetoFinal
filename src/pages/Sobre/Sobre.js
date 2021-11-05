@@ -18,7 +18,7 @@ function Sobre() {
              
                 <section className="primeiroTitulo">
                     
-                    <h1>Sobre o Projeto</h1>
+                    <h1>Sobre a Equipe Rocket</h1>
 
                 </section>
 

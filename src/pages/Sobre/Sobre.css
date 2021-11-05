@@ -364,6 +364,11 @@ margin-right: 9%;
 
 }
 
+@media (max-width: 488px){
+  .redesSociais > a{
+    display: visible;
+  }
+}
 
 
 

@@ -82,29 +82,31 @@ function PokeDetails(props) {
                </StatsDiv>
 
                <StatsDiv>
-                  <p>ATTACK:  {pokemon.stats[1].base_stat}</p>
+                  <p>Ataque:  {pokemon.stats[1].base_stat}</p>
                    <progress value={pokemon.stats[1].base_stat} max="130"></progress>
                </StatsDiv>
 
                <StatsDiv>
-                    <p>DEFENSE:  {pokemon.stats[2].base_stat}</p>
+                    <p>Defesa:  {pokemon.stats[2].base_stat}</p>
                     <progress value={pokemon.stats[2].base_stat} max="130"></progress>
                </StatsDiv>
 
-                <StatsDiv>
-                    <p>SPECIAL-ATTACK:  {pokemon.stats[3].base_stat}</p>
+               <StatsDiv>
+                    <p>Velocidade:  {pokemon.stats[5].base_stat}</p>
+                    <progress value={pokemon.stats[5].base_stat} max="130"></progress>
+                </StatsDiv>
+
+               <StatsDiv>
+                    <p>Ataque especial:  {pokemon.stats[3].base_stat}</p>
                     <progress value={pokemon.stats[3].base_stat} max="130"></progress>
                 </StatsDiv>
 
                 <StatsDiv>
-                    <p>SPECIAL-DEFENSE:  {pokemon.stats[4].base_stat}</p>
+                    <p>Defesa especial:  {pokemon.stats[4].base_stat}</p>
                    <progress value={pokemon.stats[4].base_stat} max="130"></progress>
                 </StatsDiv>
 
-                <StatsDiv>
-                    <p>SPEED:  {pokemon.stats[5].base_stat}</p>
-                    <progress value={pokemon.stats[5].base_stat} max="130"></progress>
-                </StatsDiv>
+                
           </div> 
           <Footer />
           </>}

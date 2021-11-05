@@ -33,7 +33,9 @@
 .pokemon-type-text{
     margin-right: 10px;
     border-radius: 5px;
-    text-transform: capitalize;
+    text-transform: uppercase;
+    font-weight: 800;
+    color: #fff;
 }
 
 .card-body{
