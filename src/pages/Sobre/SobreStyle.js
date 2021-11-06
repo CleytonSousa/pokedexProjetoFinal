@@ -18,7 +18,7 @@ export const Container = styled.section`
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 10%;
+    margin: 8.5%;
 
     h1{
       margin-bottom: 2%;
@@ -32,7 +32,7 @@ export const Container = styled.section`
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 22%;
+    margin-top: 19%;
 
     .detalhes{
       display: flex;
