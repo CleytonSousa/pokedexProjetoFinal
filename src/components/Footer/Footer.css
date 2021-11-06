@@ -20,9 +20,8 @@ footer > p{
     footer{
         display: block;
         text-align: center;
-        padding-bottom: 7%;
         font-size: 12px;
-        position: relative;
+        position: fixed;
     }
 }
 
@@ -33,5 +32,6 @@ footer > p{
         padding-top: 5%;
         /* padding-bottom: 5%; */
         font-size: 12px;
+        height: 8%;
     }
 }
