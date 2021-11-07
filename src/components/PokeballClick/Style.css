@@ -46,7 +46,7 @@
   #top-half {
     background-color: #222020;
     width: 300px;
-    top: 0;
+    top: 50px;
     height: 150px;
     position: absolute;
     border: 10px solid #1D1D1D;
@@ -71,7 +71,7 @@
     width: 300px;
     height: 150px;
     position: absolute;
-    bottom: 0;
+    bottom: 50px;
     border: 10px solid #1D1D1D;
     border-bottom: 10px solid #353434;
     border-radius: 0 0 400px 400px;
