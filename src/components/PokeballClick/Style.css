@@ -10,8 +10,8 @@
   }
   
   #ball {
-    width: 420px;
-    height: 420px;
+    width: 300px;
+    height: 300px;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -42,25 +42,38 @@
     }
   }
   
+  
   #top-half {
-    background-color: red;
-    width: 400px;
+    background-color: #222020;
+    width: 300px;
     top: 0;
-    height: 200px;
+    height: 150px;
     position: absolute;
-    border: 10px solid black;
-    border-bottom: 14px solid black;
+    border: 10px solid #1D1D1D;
+    border-bottom: 10px solid #353434;
     border-radius: 400px 400px 0 0;
+  }
+
+  #rocket{
+    font-size: 70px;
+    color: #B7111B;
+    display: grid;
+    justify-items: stretch;
+    justify-content: space-evenly;
+    margin-top: 20px;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: #FAF6F6;
+
   }
   
   #bottom-half {
-    background-color: white;
-    width: 400px;
-    height: 200px;
+    background-color: #B7111B;
+    width: 300px;
+    height: 150px;
     position: absolute;
     bottom: 0;
-    border: 10px solid black;
-    border-top: 14px solid black;
+    border: 10px solid #1D1D1D;
+    border-bottom: 10px solid #353434;
     border-radius: 0 0 400px 400px;
   }
   
@@ -70,11 +83,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    border: 15px solid black;
+    border: 10px solid #353434;
     border-radius: 50%;
     background-color: white;
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
   }
 
   #center-click-inner {
@@ -84,11 +97,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    border: 5px solid black;
+    border: 5px solid #1D1D1D;
     border-radius: 50%;
     background-color: white;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
   }
 
   #center-click-inner:hover {
@@ -108,4 +121,35 @@
       background-color: white;
       border-color: black;
     }
+  }
+
+  @media (max-width: 480px){
+
+    #ball{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    #bottom-half, #top-half{
+      width: 200px;
+      height: 100px;
+    }
+
+    #rocket{
+      font-size: 40px;
+      margin-top: 10px;
+    }
+
+    #center-click{
+      width: 50px;
+      height: 50px;
+      bottom: -40px;
+    }
+
+    #center-click-inner{
+      width: 30px;
+      height: 30px;
+    }
+
   }

@@ -7,6 +7,9 @@ import { getPokemonData, getPokemons } from "../../server/api";
 import Load from '../../components/LoadScreen/Load'
 import './Home.css'
 
+
+// import Pokeball from "../../components/PokeballClick/PokeballClick";
+
 const {useState, useEffect} = React;
 
 export default function Home(){
@@ -41,6 +44,8 @@ export default function Home(){
                 <Pokedex pokemons={pokemons}/>
             </main>
         }
+
+        {/* <Pokeball /> */}
 
         <Footer />
     </section>
