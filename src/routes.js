@@ -2,6 +2,7 @@ import Sobre from './pages/Sobre/Sobre'
 import Home from './pages/Home/Home'
 import Geracao from './pages/Geracao/Geracao';
 import PokeDetails from './components/PokeDetails/PokeDetails';
+import { Categorias } from './pages/Categorias/Categorias';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -21,7 +22,9 @@ function Routes() {
                         path="/:pokemonId"
                         render={(props) => <PokeDetails {...props} />}
                         />
+                    
                 </Switch>
+                <Route path="/categorias" component={Categorias}/>
             </BrowserRouter>
         </div>
     )

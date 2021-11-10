@@ -21,14 +21,14 @@ function NavMenu(){
                 
                     <Link className="navItemRespo" to="/">HOME</Link>
                     <Link className="navItemRespo" to="/geracao">GERAÇÃO</Link>
-                    <a className="navItemRespo" href="#">CATEGORIA</a>
+                    <Link className="navItemRespo" to='/categorias'>CATEGORIA</Link>
                     <Link className="navItemRespo" to='/sobre'>SOBRE</Link>
 
                 </div>
 
                     <Link to="/">HOME</Link>
                     <Link to="/geracao">GERAÇÃO</Link>
-                    <a href="#">CATEGORIA</a>
+                    <Link to='/categorias'>CATEGORIA</Link>
                     <Link to='/sobre'>SOBRE</Link>
                 <input id="menu__toggle" type="checkbox" />
 
