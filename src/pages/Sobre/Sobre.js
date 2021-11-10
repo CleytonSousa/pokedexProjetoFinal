@@ -23,9 +23,7 @@ function Sobre() {
                     <header className="titulo">
                         <h1>Sobre a Equipe Rocket</h1>
                         <p>
-                            POKÉDEX FEITA POR TRÊS ESTUDANTES DE FRONT-END COM 
-                            ÊNFASE EM REACT COMO UM PROJETO FINAL (TCC) DO CURSO 
-                            START LATAM RECIFE.
+                            POKÉDEX FEITA POR TRÊS ESTUDANTES DE FRONT-END COM ÊNFASE EM REACT COMO UM PROJETO FINAL (TCC) DO CURSO START RECIFE.
                         </p>
                     </header>
                         
