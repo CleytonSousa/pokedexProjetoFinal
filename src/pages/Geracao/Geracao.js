@@ -65,12 +65,12 @@ const Geracao = () => {
 
     const leftClick = (e) => {
         e.preventDefault();
-        carrosel.current.scrollLeft -= carrosel.current.offsetWidth + 100
+        carrosel.current.scrollLeft -= carrosel.current.offsetWidth
     }
 
     const rightClick = (e) => {
         e.preventDefault();
-        carrosel.current.scrollLeft += carrosel.current.offsetWidth - 100
+        carrosel.current.scrollLeft += carrosel.current.offsetWidth
     }
     return (
         <section>

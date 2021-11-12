@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import './Menu.css'
+import { MenuRocket } from './MenuStyle.js'
 import pokebola from '../../assets/pokebola.png'
 import { Link } from "react-router-dom";
 
@@ -13,16 +13,15 @@ function NavMenu(){
     }
 
     return(
-        <div>
-            <nav>
+        <>
+            <MenuRocket>
                 <img id="pokebola" src={pokebola} alt="a" />
 
                 <div className={active ? 'navRespo' : 'noShow'} id="navRespo">
-                
                     <Link className="navItemRespo" to="/">HOME</Link>
                     <Link className="navItemRespo" to="/geracao">GERAÇÃO</Link>
                     <Link className="navItemRespo" to='/categorias'>CATEGORIA</Link>
-                    <Link className="navItemRespo" to='/sobre'>SOBRE</Link>
+                    <Link className="navItemRespo" to='/sobre'>SOBRE</Link> 
 
                 </div>
 
@@ -38,8 +37,8 @@ function NavMenu(){
                     <span></span>
                 </label>
 
-            </nav>
-        </div>
+            </MenuRocket>
+        </>
     );
 }
 
