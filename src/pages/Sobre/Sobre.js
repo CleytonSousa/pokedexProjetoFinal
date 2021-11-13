@@ -32,11 +32,11 @@ function Sobre() {
                             <img src={ImagemPerfil1} alt="" />
                             <h1>Barbaha Santos</h1>
                             <div className="redesSociais">
-                                <a href="https://github.com/barbaha" target="_blank" className="icon">
+                                <a rel="noreferrer" href="https://github.com/barbaha" target="_blank" className="icon">
                                     <img alt='' src={ImagemGithub}/>  
                                 </a>
             
-                                <a href="https://www.linkedin.com/in/barbahasantos/" target="_blank" className="icon">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/barbahasantos/" target="_blank" className="icon">
                                     <img  alt='' src={ImagemLinkedin}/>
                                 </a>
                             </div>
@@ -46,11 +46,11 @@ function Sobre() {
                             <img src={ImagemPerfil2} alt=""/>
                             <h1>Cleyton Sousa</h1>
                             <div className="redesSociais">
-                                <a href="https://github.com/CleytonSousa" target="_blank" className="icon">
+                                <a rel="noreferrer" href="https://github.com/CleytonSousa" target="_blank" className="icon">
                                     <img alt='' src={ImagemGithub}/>  
                                 </a>
             
-                                <a href="https://www.linkedin.com/in/cleyton-sousa-3626a11a5/" target="_blank" className="icon">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/cleyton-sousa-3626a11a5/" target="_blank" className="icon">
                                     <img alt='' src={ImagemLinkedin}/>
                                 </a>
                             </div>
@@ -60,11 +60,11 @@ function Sobre() {
                             <img src={ImagemPerfil3} alt=""/>
                             <h1>Maria Eliza</h1>
                             <div className="redesSociais">
-                                <a href="https://github.com/MariaEliiza"  target="_blank" className="icon">
+                                <a rel="noreferrer" href="https://github.com/MariaEliiza"  target="_blank" className="icon">
                                     <img alt='' src={ImagemGithub}/>  
                                 </a>
             
-                                <a href="https://www.linkedin.com/in/maria-eliza-047765196/" target="_blank" className="icon">
+                                <a rel="noreferrer" href="https://www.linkedin.com/in/maria-eliza-047765196/" target="_blank" className="icon">
                                     <img alt='' src={ImagemLinkedin}/>
                                 </a>
                             </div>

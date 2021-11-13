@@ -6,7 +6,7 @@ import { getPokemonData } from '../../server/api'
 import { useHistory } from 'react-router'
 import '../../components/Pokemon/Pokemon.css'
 import Load from '../../components/LoadScreen/Load'
-import arow from '../../assets/arrow.png'
+import Carousel from 'react-elastic-carousel'
 
 import axios from 'axios'
 
@@ -15,10 +15,9 @@ import {
     CardContainer,
     Container,
     Menu,
-    ArrowCarousel
 } from './GeracaoStyle'
 
-import {LoadingText} from './Loading/Loading'
+import { LoadingText } from './Loading/Loading'
 
 const Geracao = () => {
     const history = useHistory()
@@ -26,14 +25,27 @@ const Geracao = () => {
     const [pokemonData, setPokemonData] = useState()
     const [loading, setLoading] = useState(true)
     const [pokemonImageLoad, setPokemonImageLoad] = useState(true)
+    const [toShow, setToShow] = useState(4)
     const carrosel = useRef(null)
-    const [city, setCity] = useState()
+    let largura = window.screen.width;
 
+    useEffect(() => {
+
+        if (largura >= 1400) {
+            setToShow(6)
+        }
+        if (largura <= 908 && largura >= 740) {
+            setToShow(3)
+        } else if (largura <= 739 && largura >= 527) {
+            setToShow(2)
+        } else if (largura <= 526) {
+            setToShow(1)
+        }
+    }, [largura])
 
     const getPokemonDataBaseInGeration = async () => {
         try {
             const data = await axios.get(`https://pokeapi.co/api/v2/generation/${gerId}`);
-            setCity(data.data.main_region.name)
 
             const promises = data.data.pokemon_species.map(async (pokemon) => {
                 return await getPokemonData(`https://pokeapi.co/api/v2/pokemon/${pokemon.name}`)
@@ -53,25 +65,16 @@ const Geracao = () => {
         }, 4000);
     }, [gerId])
 
-    function next(){
+    function next() {
         gerId === 1 ? setGerId(8) : setGerId(gerId - 1)
         setPokemonImageLoad(true)
     }
 
-    function back(){
+    function back() {
         gerId === 8 ? setGerId(1) : setGerId(gerId + 1)
         setPokemonImageLoad(true)
     }
 
-    const leftClick = (e) => {
-        e.preventDefault();
-        carrosel.current.scrollLeft -= carrosel.current.offsetWidth + 100
-    }
-
-    const rightClick = (e) => {
-        e.preventDefault();
-        carrosel.current.scrollLeft += carrosel.current.offsetWidth - 100
-    }
     return (
         <section>
             <NavMenu />
@@ -82,58 +85,54 @@ const Geracao = () => {
                         <main id='pokedexContainer'>
                             <Menu>
                                 <button onClick={() => next()}>Back</button>
-                                <h1>Geração {gerId}</h1>
+                                <h1>Geração: {gerId}</h1>
                                 <button onClick={() => back()}>Next</button>
                             </Menu>
                             <Container ref={carrosel}>
-                                {pokemonData?.map((pokemon, idx) => {
-                                    return (
-                                        <CardContainer key={idx} className='pokemon-card'>
-                                            <section className="pokemon-img-container">
-                                                {pokemonImageLoad ? <div style={{textAlign: 'center', paddingBottom: "5px"}}><img style={{width: '150px', height: '150px'}} src="https://c.tenor.com/0prLZ4UeNVAAAAAM/pokemon.gif" alt="" />
-                                                <span className="animate-charcter"><LoadingText /></span>
-                                                </div>: <section >
-                                                    <img
-                                                    onClick={() => history.push(`/${pokemon?.id}`)}
-                                                    src={`https://cdn.traction.one/pokedex/pokemon/${pokemon?.id}.png`}
-                                                    alt='esse pokemon não foi encontrado na api'
-                                                    loading='lazy'
-                                                    className="pokemon-img" />
-                                                </section>}
-                                            </section>
-                                            <section className="card-body">
-                                                <section className="card-top">
-                                                    <h3>{pokemon?.name}</h3>
+                                <Carousel
+                                    itemsToShow={toShow}
+                                    itemsToScroll={toShow}
+                                >
+                                    {pokemonData?.map((pokemon, idx) => {
+                                        return (
+                                            <CardContainer key={idx} className='pokemon-card'>
+                                                <section className="pokemon-img-container">
+                                                    {pokemonImageLoad ? <div style={{ textAlign: 'center', paddingBottom: "5px" }}>
+                                                        <img style={{ width: '150px', height: '150px', borderRadius: '50px' }}
+                                                            src="https://c.tenor.com/0prLZ4UeNVAAAAAM/pokemon.gif" alt=""
+                                                        />
+                                                        <span className="animate-charcter"><LoadingText /></span>
+                                                    </div> : <section >
+                                                        <img
+                                                            onClick={() => history.push(`/${pokemon?.id}`)}
+                                                            src={`https://cdn.traction.one/pokedex/pokemon/${pokemon?.id}.png`}
+                                                            alt='esse pokemon não foi encontrado na api'
+                                                            loading='lazy'
+                                                            className="pokemon-img" />
+                                                    </section>}
                                                 </section>
-                                                <section className='card-bottom'>
-                                                    <section className='types pokemon-types'>
-                                                        {pokemon?.types.map((type, idx) => {
-                                                            return (
-                                                                <section key={idx} className='pokemon-type-text' id={type.type.name}>
-                                                                    {type.type.name}
-                                                                </section>
-                                                            )
-                                                        })}
+                                                <section className="card-body">
+                                                    <section className="card-top">
+                                                        <h3>{pokemon?.name}</h3>
+                                                    </section>
+                                                    <section className='card-bottom'>
+                                                        <section className='types pokemon-types'>
+                                                            {pokemon?.types.map((type, idx) => {
+                                                                return (
+                                                                    <section key={idx} className='pokemon-type-text' id={type.type.name}>
+                                                                        {type.type.name}
+                                                                    </section>
+                                                                )
+                                                            })}
+                                                        </section>
                                                     </section>
                                                 </section>
-                                            </section>
-                                        </CardContainer>
+                                            </CardContainer>
 
-                                    )
-                                })}
+                                        )
+                                    })}
+                                </Carousel>
                             </Container>
-                            <ArrowCarousel>
-                                <button onClick={leftClick} >
-                                    <img id="left" src={arow} alt=""/>
-                                </button>
-
-                                <span style={{fontSize: "4vw"}}>Região de: <span style={{color: 'rgba(0, 181, 204, 1)', textDecoration: 'underline'}}>{city}</span></span>
-
-                                <button onClick={rightClick}>
-                                    <img src={arow} alt=""/>
-                                </button>
-                                
-                            </ArrowCarousel>
                         </main>
                     </>
                 }

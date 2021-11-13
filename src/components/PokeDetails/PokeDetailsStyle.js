@@ -243,7 +243,10 @@ text-align: center;
 border-radius: 5px;
 font-size: 15px;
 margin: 5px;
-
+text-transform: capitalize;
+color: #fff;
+font-weight: bold;
+font-size: 18px;
 
 #grass{
   background-color: #10B921;

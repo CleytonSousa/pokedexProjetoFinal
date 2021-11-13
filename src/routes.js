@@ -2,6 +2,7 @@ import Sobre from './pages/Sobre/Sobre'
 import Home from './pages/Home/Home'
 import Geracao from './pages/Geracao/Geracao';
 import PokeDetails from './components/PokeDetails/PokeDetails';
+import Categorias from './pages/Categorias/Categorias';
 
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
@@ -14,10 +15,10 @@ function Routes() {
             <BrowserRouter>
                 <Switch>
                     <Route path='/' exact component={Home} />
-                    <Route path='/sobre' exact component={Sobre} />
-                    <Route path='/geracao' exact component={Geracao} />
+                    <Route path='/sobre' component={Sobre} />
+                    <Route path='/geracao' component={Geracao} />
+                    <Route path="/categorias" component={Categorias}/>
                     <Route
-                        exact
                         path="/:pokemonId"
                         render={(props) => <PokeDetails {...props} />}
                         />
