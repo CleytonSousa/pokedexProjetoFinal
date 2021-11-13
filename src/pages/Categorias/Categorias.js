@@ -7,13 +7,16 @@ import Footer from '../../components/Footer/Footer'
 import Load from '../../components/LoadScreen/Load'
 import {
     Container,
+    TypeBtn
 } from './CategoriasStyle'
+import { useHistory } from 'react-router'
 
 const Categorias = () => {
 
     const [categoria, setCategoria] = useState([])
     const [type, setType] = useState(1)
     const [load, setLoad] = useState(true)
+    const history = useHistory() 
 
 
     const getFire = async () => {
@@ -40,83 +43,100 @@ const Categorias = () => {
             <NavMenu />
             {load ? <Load /> :
                 <Container>
-                    <section>
-                        <button onClick={() => {
+                    <TypeBtn>
+                        <button id="fire"
+                        onClick={() => {
                             setType(10)
                             setLoad(true)
                         }}>Fire</button>
 
-                        <button onClick={() => {
+                        <button id="fighting"
+                        onClick={() => {
                             setType(2)
                             setLoad(true)
                         }}>Fighting</button>
 
-                        <button onClick={() => {
+                        <button id="normal"
+                        onClick={() => {
                             setType(1)
                             setLoad(true)
                         }}>Normal</button>
 
-                        <button onClick={() => {
+                        <button id="poison"
+                        onClick={() => {
                             setType(4)
                             setLoad(true)
                         }}>Poison</button>
 
-                        <button onClick={() => {
+                        <button id="ground"
+                        onClick={() => {
                             setType(5)
                             setLoad(true)
                         }}>Ground</button>
 
-                        <button onClick={() => {
+                        <button id="rock"
+                        onClick={() => {
                             setType(6)
                             setLoad(true)
                         }}>Rock</button>
 
-                        <button onClick={() => {
+                        <button id="bug" //Deus me livre
+                        onClick={() => {
                             setType(7)
                             setLoad(true)
                         }}>Bug</button>
 
-                        <button onClick={() => {
+                        <button id="ghost"
+                        onClick={() => {
                             setType(8)
                             setLoad(true)
                         }}>Ghost</button>
 
-                        <button onClick={() => {
+                        <button id="whater"
+                        onClick={() => {
                             setType(11)
                             setLoad(true)
                         }}>Wather</button>
 
-                        <button onClick={() => {
+                        <button id="grass"
+                        onClick={() => {
                             setType(12)
                             setLoad(true)
                         }}>Grass</button>
 
-                        <button onClick={() => {
+                        <button id="eletric"
+                        onClick={() => {
                             setType(13)
                             setLoad(true)
                         }}>Electric</button>
 
-                        <button onClick={() => {
+                        <button id="dragon"
+                        onClick={() => {
                             setType(16)
                             setLoad(true)
                         }}>Dragon</button>
 
-                        <button onClick={() => {
+                        <button id="dark"
+                        onClick={() => {
                             setType(17)
                             setLoad(true)
                         }}>Dark</button>
                         
-                        <button onClick={() => {
+                        <button id="fairy"
+                        onClick={() => {
                             setType(18)
                             setLoad(true)
                         }}>Fairy</button>
                         
-
-                    </section>
+                    </TypeBtn>
                     {categoria.map((poke) => {
                         return (
-                            <section>
-                                <img src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} alt='a foto desse pokemon não foi encontrada na api' />
+                            <section key={poke.name}>
+                                <img 
+                                onClick={() => history.push(`/${poke?.id}`)}
+                                style={{cursor: 'pointer'}}
+                                src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
+                                alt='a foto desse pokemon não foi encontrada na api' />
                                 <h1>{poke.name}</h1>
                                 {poke.types.map((types, idx) => {
                                     return <Types key={idx} id={types.type.name}>{types.type.name}</Types>;

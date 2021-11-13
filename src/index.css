@@ -11,6 +11,10 @@ body {
   background-attachment: fixed;
 }
 
+.rec-dot{ /*Pagination do carrossel da page gerações*/
+  display: none;
+}
+
 html{
   margin: 0;
   padding: 0;

@@ -1,10 +1,12 @@
-*{
-  overflow: visible;
-}
-
 .HomePage{
     animation: fadeIn ease 2s;
-    height: 90vh;
+    /* height: 100vh; */
+}
+
+@media (min-width: 1266px) {
+  .HomePage{
+    height: 140vh;
+  }
 }
 
 @keyframes fadeIn{

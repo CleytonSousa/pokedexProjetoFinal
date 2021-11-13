@@ -13,22 +13,9 @@ export const FooterRocket = styled.footer`
     font-family: 'Raleway';
     padding-top: 1% ;
 
-    @media (max-width: 1030px){
-      position: relative;
-      margin-top: 10%;
-    }
-
-    @media (max-width: 850px) {
-        margin-top: 50vh;
-    }
-
-    @media (max-width: 640px) {
-        margin-top: 105vh;
-    }
-
     @media (max-width: 420px) {
         display: flex;
-        margin-top: 320vh;
+        /* margin-top: 320vh; */
         align-items: center;
         flex-direction: column;
         align-self: center;

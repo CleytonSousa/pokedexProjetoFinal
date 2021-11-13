@@ -7,19 +7,19 @@ import { getPokemonData, getPokemons } from "../../server/api";
 import Load from '../../components/LoadScreen/Load'
 import './Home.css'
 
+const { useState, useEffect } = React;
 
-// import Pokeball from "../../components/PokeballClick/PokeballClick";
-
-const {useState, useEffect} = React;
-
-export default function Home(){
+export default function Home() {
 
     const [pokemons, setPokemon] = useState([])
+    const [page, setPage] = useState(0)
+    const [total, setTotal] = useState(0)
     const [loading, setLoading] = useState(true);
 
     const fetchPokemons = async () => {
-        try{
-            const data = await getPokemons();
+        try {
+            setLoading(true)
+            const data = await getPokemons(10, 10 * page);
             console.log(data.results)
             const promises = data.results.map(async (pokemon) => {
                 return await getPokemonData(pokemon.url)
@@ -27,27 +27,31 @@ export default function Home(){
             const results = await Promise.all(promises)
             setPokemon(results)
             setLoading(false); //ao carregar a pagina isso altera o loading
-        } catch(err){
+            setTotal(Math.ceil(data.count / 25));
+        } catch (err) {
             console.log(err)
         }
     }
 
     useEffect(() => {
         fetchPokemons();
-    }, []);
-    return(
+    }, [page]);
+    return (
         <section>
-        <NavMenu />
-        <SearchPokemon />
-        { loading ? <Load /> : //loading
-            <main className="HomePage">
-                <Pokedex pokemons={pokemons}/>
-            </main>
-        }
+            {loading ? <Load /> : //loading
+                <main className="HomePage">
+                    <NavMenu />
+                    <SearchPokemon />
+                    <Pokedex
+                        pokemons={pokemons}
+                        page={page}
+                        setPage={setPage}
+                        total={total}
+                    />
 
-        {/* <Pokeball /> */}
-
-        <Footer />
-    </section>
+                </main>
+            }
+            <Footer />
+        </section>
     )
 }
