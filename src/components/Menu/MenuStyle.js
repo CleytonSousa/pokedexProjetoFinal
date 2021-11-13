@@ -22,7 +22,7 @@ export const MenuRocket = styled.nav`
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
-        animation: opacidade 1s linear 1;
+        animation: opacidade 0.5s linear 1; /* anim menu */
         padding-bottom: 5px;
     }
 
@@ -32,7 +32,7 @@ export const MenuRocket = styled.nav`
     }
 
     svg{
-      animation: opacidade 1s linear 1;
+      animation: opacidade 0.5s linear 1; /* anim menu */
     }
 
     #pokebola{
@@ -117,10 +117,10 @@ export const MenuRocket = styled.nav`
 
     @keyframes opacidade {
       0%{
-        margin-top: -150px;
+        margin-top: -100px;
       }
       50%{
-        margin-top: -100px;
+        margin-top: -50px;
       }
 
       100%{
