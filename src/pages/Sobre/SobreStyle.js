@@ -32,7 +32,7 @@ export const Container = styled.section`
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 19%;
+    margin-top: 22%;
 
     .detalhes{
       display: flex;
