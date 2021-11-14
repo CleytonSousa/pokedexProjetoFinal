@@ -3,9 +3,9 @@ import './Load.css'
 
 export default function Load(){
     return(
-		<div class="loader">
+		<div className="loader">
     <svg version="1.1" id="Ebene_1" xmlns="http://www.w3.org/2000/svg" link="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 330 331.7" enable-background="new 0 0 330 331.7" space="preserve">
+	 viewBox="0 0 330 331.7" enableBackground="new 0 0 330 331.7" space="preserve">
       <circle id="center" fill="#FFFFFF" cx="165" cy="165.9" r="36.5"/>
 <g id="bottom">
 <path id="bottom1" fill="#FFFFFF" d="M165,267.6c-28.7,0-54.6-11.9-73.1-31L76.2,252c22.5,23.2,53.9,37.6,88.8,37.6

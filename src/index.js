@@ -1,15 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import Home from './pages/Home'
-import Sobre from './pages/Sobre'
-
+import ReactDOM from 'react-dom'; 
+import { BrowserRouter } from 'react-router-dom'
 
 // import Sobre from './pages/Sobre';
-
 import './index.css'
+import Routes from './routes';
+
 ReactDOM.render(
-  <React.StrictMode>
-      <Sobre />
-  </React.StrictMode>,
+  <BrowserRouter>
+      <Routes />
+  </BrowserRouter>,
   document.getElementById('root')
 );

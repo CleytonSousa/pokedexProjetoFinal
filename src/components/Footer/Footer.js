@@ -1,16 +1,18 @@
 import React from "react";
-import './Footer.css'
+import {FooterRocket} from './FooterStyle.js'
 
 function Footer(){
     return(
-        <footer>
+        <>
+        <FooterRocket>
             <p>
-            Desenvolvedores Barbaha Santos, Cleyton Sousa e Maria Eliza
+                Desenvolvido pela Equipe Rocket
             </p>
             <h3>
                 START
             </h3>
-        </footer>
+        </FooterRocket>
+        </>
     )
 }
 
