@@ -18,10 +18,10 @@ export const Container = styled.section`
     text-align: center;
     display: flex;
     flex-direction: column;
-    margin: 8.5%;
+    margin: 8%;
 
     h1{
-      margin-bottom: 2%;
+      margin-bottom: 1%;
     }
   }
   
@@ -32,7 +32,7 @@ export const Container = styled.section`
     flex-wrap: nowrap;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 19%;
+    margin-top: 19.5%;
 
     .detalhes{
       display: flex;
@@ -113,7 +113,7 @@ export const Container = styled.section`
 
     @media (max-width: 850px){
       .titulo{
-        margin-top: 20%;
+        margin-top: 15%;
       }
 
       .alunos{
@@ -132,9 +132,9 @@ export const Container = styled.section`
       }
     }
 
-    @media (max-width: 600px){
+    @media (max-width: 610px){
       .alunos{
-        margin-top: 45%;
+        margin-top: 47%;
         height: 1200px;
         display: flex;
         flex-direction: column;
@@ -145,7 +145,7 @@ export const Container = styled.section`
 
     @media (max-width: 480px){
       .titulo{
-        margin-top: 25%;
+        margin-top: 22%;
       }
 
       .alunos{
@@ -172,6 +172,26 @@ export const Container = styled.section`
     @media (max-width: 380px){
       .titulo{
         margin-top: 120px;
+      }
+
+      .alunos{
+        display: flex;
+        margin-top: 300px;
+        height: 850px;
+
+        .detalhes{
+          .redesSociais{
+            a{
+              display: flex;
+            }
+          }
+        }
+      }
+    }
+
+     @media (max-width: 349px){
+      .titulo{
+        margin-top: 90px;
       }
 
       .alunos{
