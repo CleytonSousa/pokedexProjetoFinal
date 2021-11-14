@@ -8,6 +8,8 @@ import Load from '../../components/LoadScreen/Load'
 import './Home.css'
 
 
+
+
 const { useState, useEffect } = React;
 
 export default function Home() {
@@ -28,7 +30,7 @@ export default function Home() {
             const results = await Promise.all(promises)
             setPokemon(results)
             setLoading(false); //ao carregar a pagina isso altera o loading
-            setTotal(Math.ceil(data.count / 25));
+            setTotal(Math.ceil(data.count / 10));
         } catch (err) {
             console.log(err)
         }

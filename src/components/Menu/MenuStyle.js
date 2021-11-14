@@ -12,6 +12,7 @@ export const MenuRocket = styled.nav`
     z-index: 1;
     left: 0;
     width: 100%;
+    top: 0;
 
     .noShow{
       display: none;

@@ -8,6 +8,9 @@ import '../../components/Pokemon/Pokemon.css'
 import Load from '../../components/LoadScreen/Load'
 import Carousel from 'react-elastic-carousel'
 
+import setaDireita from "../../assets/direita.png"
+import setaEsquerda from "../../assets/esquerda.png"
+
 import axios from 'axios'
 
 
@@ -84,9 +87,13 @@ const Geracao = () => {
                     <>
                         <main id='pokedexContainer'>
                             <Menu>
-                                <button onClick={() => next()}>Back</button>
-                                <h1>Geração: {gerId}</h1>
-                                <button onClick={() => back()}>Next</button>
+                                <button onClick={() => next()}>
+                                    <img src={setaEsquerda} alt="" />
+                                </button>
+                                <h1>Pokémons da Geração {gerId}</h1>
+                                <button onClick={() => back()}>
+                                    <img src={setaDireita} alt="" />
+                                </button>
                             </Menu>
                             <Container ref={carrosel}>
                                 <Carousel
