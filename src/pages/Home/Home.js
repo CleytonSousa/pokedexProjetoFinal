@@ -7,6 +7,7 @@ import { getPokemonData, getPokemons } from "../../server/api";
 import Load from '../../components/LoadScreen/Load'
 import './Home.css'
 
+
 const { useState, useEffect } = React;
 
 export default function Home() {
