@@ -136,7 +136,9 @@ const Categorias = () => {
                                 onClick={() => history.push(`/${poke?.id}`)}
                                 style={{cursor: 'pointer'}}
                                 src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
-                                alt='a foto desse pokemon não foi encontrada na api' />
+                                alt='a foto desse pokemon não foi encontrada na api'
+                                title={`O lendario ${poke.name}`}
+                                />
                                 <h1>{poke.name}</h1>
                                 {poke.types.map((types, idx) => {
                                     return <Types key={idx} id={types.type.name}>{types.type.name}</Types>;
