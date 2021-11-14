@@ -7,14 +7,23 @@
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     grid-gap: 10px;
-    padding:0 10px ;
-    margin-left: 2%;
-    margin-right: 2%;
+    /*padding:0 10px ;
+     margin-left: 2%;
+    margin-right: 2%; */
+    padding-bottom: 0;
+    justify-items: center;
+}
+
+@media (max-width: 1260px){
+    .pokedexGrid{
+        padding-bottom: 10%;
+    }
 }
 
 @media (max-width: 1029px) {
     .pokedexGrid{
         grid-template-columns: repeat(4, 2fr);
+        padding-bottom: 15%;
     }
 }
 @media (max-width: 851px) {
@@ -25,10 +34,17 @@
 @media (max-width: 645px) {
     .pokedexGrid{
         grid-template-columns: repeat(2, 2fr);
+        padding-bottom: 20%;
+    }
+}
+@media (max-width: 460px) {
+    .pokedexGrid{
+        padding-bottom: 25%;
     }
 }
 @media (max-width: 419px) {
     .pokedexGrid{
         grid-template-columns: repeat(1, 1fr);
+        padding-bottom: 35%;
     }
 }

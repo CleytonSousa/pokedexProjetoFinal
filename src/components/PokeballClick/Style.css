@@ -136,6 +136,10 @@
       height: 100px;
     }
 
+    #top-half{
+      top: 130px;
+    }
+
     #rocket{
       font-size: 40px;
       margin-top: 10px;

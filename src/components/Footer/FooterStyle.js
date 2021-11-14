@@ -22,7 +22,8 @@ export const FooterRocket = styled.footer`
         padding-bottom: 3%;
 
         p{
-          margin: 0;
+          margin: 0px;
+          padding-top: 10px;
         }
     }
 

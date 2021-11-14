@@ -59,7 +59,7 @@ export const Container = styled.section`
       }
   }
   
-  @media (max-width: 1030px) {
+  @media (max-width: 1160px) {
     grid-template-columns: repeat(4, 2fr);
     font-size: 16px;
 
@@ -99,7 +99,7 @@ export const Container = styled.section`
 
   }
 
-  @media (max-width: 851px) {
+  @media (max-width: 900px) {
     display: grid;
     grid-template-columns: repeat(1, 3fr);
     align-content: space-between;
@@ -125,23 +125,33 @@ export const Container = styled.section`
       /* grid-template-columns: repeat(1, 3fr); */
       justify-content: space-evenly;
       width: 360px;
-      margin: 2% 5% 5% auto;
+      margin: 0 5% 10% auto;
       float: right;
+      z-index: 0;
     }
 
     .pokemonImage{
       display: grid;
       justify-content: space-evenly;
-      margin-top: 100px;
+      /* margin-top: 100px; */
 
       img{
-          width: 40vw;
-          min-width: 340px;
+        width: 40vw;
+        min-width: 320px;
+        margin-left: 10%;
       }
     }
   }
 
-  @media (max-width: 450px) {
+  @media (max-width: 575px){
+    .pokemonImage{
+      img{
+        margin-left: 20%;
+      }
+    }
+  }
+
+  @media (max-width: 475px) {
     display: grid;
     grid-template-columns: repeat(1, 2fr);
     align-content: space-between;
@@ -172,16 +182,17 @@ export const Container = styled.section`
     }
 
     .about{
-      margin: 5% auto 10% 5%;
+      margin: 5% auto 15% 5%;
     }
 
     .pokemonImage{
       align-self: center;
-      margin-top: 5%;
+      /* margin-top: 5%; */
 
       img{
           width: 50vw;
           min-width: 280px;
+          margin-left: 0;
       }
     }
   }
@@ -190,15 +201,15 @@ export const Container = styled.section`
     /* AJUSTE PARA TELA SMART MÉDIA */
     @media (max-width: 375px) {
       .about{
-        margin: 5% auto 10% 2%;
+        margin: 5% auto 18% 2%;
       }
     }
 
 
     /* AJUSTE PARA TELA SMART PEQUENA */
-    @media (max-width: 320px){
+    @media (max-width: 350px){
       .about{
-        margin: 0;
+        margin: 5% auto 18% 2%;
         width: 100vw;
       }
 
@@ -221,6 +232,8 @@ export const StatsDiv = styled.div `
     display: flex;
     justify-content: flex-end;
     font-size: 16px;
+    align-items: center;
+    height: 30px;
     
     progress{
       margin-left: 15px;
@@ -230,7 +243,7 @@ export const StatsDiv = styled.div `
       height: 20px;
     }
 
-    @media (max-width: 320px){
+    @media (max-width: 360px){
       font-size: 12px;
     }
 
