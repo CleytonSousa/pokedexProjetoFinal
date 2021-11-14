@@ -23,7 +23,6 @@ export default function Home() {
         try {
             setLoading(true)
             const data = await getPokemons(10, 10 * page);
-            console.log(data.results)
             const promises = data.results.map(async (pokemon) => {
                 return await getPokemonData(pokemon.url)
             })

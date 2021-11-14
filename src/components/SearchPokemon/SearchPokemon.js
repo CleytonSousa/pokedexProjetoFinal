@@ -18,7 +18,7 @@ function SearchPokemon(){
 
     const click = async (e) => {
         const data = await searchPokemon(search);
-        console.log(search)
+        // console.log(search)
         setPokemon(data)
         document.getElementById('pokedexContainer').style.display = 'none'
 
