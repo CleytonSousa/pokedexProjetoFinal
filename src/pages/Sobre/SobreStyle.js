@@ -42,17 +42,47 @@ export const Container = styled.section`
       flex-direction: column;
       flex-wrap: wrap;
       align-items: stretch;
+      animation: slide 1s 1;
+
+      @keyframes slide{
+        from{
+          position: absolute;
+          left: 500px;
+        }
+      }
+
+      @media (max-width: 850px){
+          @keyframes slide{
+           0%{
+             opacity: .2;
+           }
+
+           50%{
+             opacity: .5;
+           }
+
+           100%{
+             opacity: .9;
+           }
+          }
+      }
 
       img{
         width: 250px;
         height: 250px;
         display: flex;
         align-self: center;
+      
       }
+
+      .detalhes{
+        transition: width 2s, height 2s, transform 2s;
+      } 
 
       h1{
         display: grid;
         margin: 2%;
+        
         
       }
 
@@ -67,13 +97,37 @@ export const Container = styled.section`
           img{
             width: 50px;
             height: 50px;
+            border: none;
+                      
 
           }
+
+      
         }
 
         a:hover{
           border-bottom: none;
+          transform: scale(1.2);
+          opacity: 0.2;
+          
+            
         }
+
+        a:hover{
+
+          transition:  1s;
+
+        }
+        
+        a:hover{
+
+
+          opacity: 0.6;
+          filter: alpha(opacity=50);
+          zoom: 1;
+        }
+  
+
       }
     }
   }
@@ -189,7 +243,7 @@ export const Container = styled.section`
       }
     }
 
-     @media (max-width: 349px){
+     @media (max-width: 345px ){
       .titulo{
         margin-top: 90px;
       }
@@ -203,6 +257,7 @@ export const Container = styled.section`
           .redesSociais{
             a{
               display: flex;
+     
             }
           }
         }

@@ -182,7 +182,7 @@ export const Container = styled.section`
     }
 
     .about{
-      margin: 5% auto 15% 5%;
+      margin: 5% auto 20% 5%;
     }
 
     .pokemonImage{
@@ -201,7 +201,7 @@ export const Container = styled.section`
     /* AJUSTE PARA TELA SMART MÉDIA */
     @media (max-width: 375px) {
       .about{
-        margin: 5% auto 18% 2%;
+        margin: 5% auto 22% 2%;
       }
     }
 
@@ -209,7 +209,7 @@ export const Container = styled.section`
     /* AJUSTE PARA TELA SMART PEQUENA */
     @media (max-width: 350px){
       .about{
-        margin: 5% auto 18% 2%;
+        margin: 5% auto 25% 2%;
         width: 100vw;
       }
 

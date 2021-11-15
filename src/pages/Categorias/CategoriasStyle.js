@@ -1,164 +1,244 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(4, 2fr);
         grid-gap: 10px;
-        margin: 0 20px;
-
-        @media (max-width: 959px){
-            grid-template-columns: repeat(3, 2fr);
-        }
-
-        @media (max-width: 725px){
-            grid-template-columns: repeat(2, 2fr);
-        }
-
-        @media (max-width: 515px){
-            grid-template-columns: repeat(1, 2fr);
-        }
-
-        section{
-            margin-top: 100px;
-            background: #9A9795;
-            text-align: center;
-            border-radius: 15px;
+        width: 90%;
+        margin-left: 5%;
+        flex-direction: column;
 
         h1{
+            font-size: 20px;
+            color: #fff;
+            margin-top: 120px;
+            margin-bottom: 0;
             text-align: center;
         }
-        img{
-            max-width: 150px;
-            width: 20vw;
-        }
-    }
 
-    
+        .pokedexGrid{
+            display: grid;
+            grid-template-columns: repeat(5, 2fr);
+            grid-gap: 10px;
+            padding-bottom: 0;
+            justify-items: center;
+            margin-bottom: 10%;
+        }
+
+        @media (max-width: 1260px){
+            .pokedexGrid{
+                padding-bottom: 10%;
+            }
+        }
+
+        @media (max-width: 1029px) {
+            .pokedexGrid{
+                grid-template-columns: repeat(4, 2fr);
+                padding-bottom: 15%;
+            }
+        }
+        @media (max-width: 851px) {
+            .pokedexGrid{
+                grid-template-columns: repeat(3, 2fr);
+            }
+        }
+        @media (max-width: 645px) {
+            .pokedexGrid{
+                grid-template-columns: repeat(2, 2fr);
+                padding-bottom: 20%;
+            }
+        }
+        @media (max-width: 460px) {
+            .pokedexGrid{
+                padding-bottom: 25%;
+            }
+        }
+        @media (max-width: 419px) {
+            .pokedexGrid{
+                grid-template-columns: repeat(1, 1fr);
+                padding-bottom: 35%;
+            }
+        }
 `;
 
 export const TypeBtn = styled.section`
+    grid-template-columns: repeat(4, 2fr);
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: 2% 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    button{
-        height: 35px;
-        width: 100px;
-        margin: 5px;
+     button{
+        margin: 8px;
         cursor: pointer;
         border: none;
         border-radius: 15px;
         color: white;
         font-weight: bolder;
-        font-size: 17px;
+        font-size: 16px;
         text-transform: uppercase;
+        display: flex;
+        padding: 10px !important;
+        font-weight: 800;
+        font-family: 'raleway'
     }
 
-    #fire{
-        background: #FDA015;
-    
+    #fire{   
         :hover{
             background: #fd8115;
         }
     }
 
     #fighting{
-        background: #b01818;
-
         :hover{
             background: #b50707;
         }
     }
 
     #normal{
-        background: #777777;
-
         :hover{
             background: #636363;
         }
     }
 
     #poison{
-        background: #7F18B0;
-
         :hover{
             background: #5f1085;
         }
     }
 
     #ground{
-        background: #B06A18;
-
         :hover{
             background: #9e5e13;
         }
     }
 
     #rock{
-        background: #9F8F8F;
-
         :hover{
             background: #968484;
         }
     }
 
     #bug{
-        background: #B2CA22;
-
         :hover{
             background: #a6bf0d;
         }
     }
 
     #ghost{
-        background: #3B2A51;
-
         :hover{
             background: #462670;
         }
     }
 
-    #whater{
-        background: #15C5FD;
-
+    #water{
         :hover{
             background: #00ace3;
         }
     }
 
     #grass{
-        background: #10B921;
-
         :hover{
             background: #039612;
         }
     }
 
-    #eletric{
-        background: #FEF517;
-
+    #electric{
         :hover{
-            background: #dbd300;
+            background: #FFD700;
         }
     }
 
     #dragon{
-        background: #2D0264;
-
         :hover{
             background: #390180;
         }
     }
 
     #dark{
-        background: #562424;
         :hover{
             background: #401919;
         }
     }
 
     #fairy{
-        background: #F54097;
-        
         :hover{
             background: #fc1e89;
         }
     }
 `;
+
+export const PokemonCard = styled.section`
+    display: grid;
+    border-radius: 15px;
+    width: 200px;
+
+
+    :hover{
+        cursor: pointer;
+    }
+
+    .areaPokemon{
+        background: #9A9795;
+        border-radius: 15px;
+        max-width: 160px;
+        max-height: 160px;
+        margin: 0;
+        padding: 20px;
+        font-family: "raleway";
+        font-weight: 700;
+
+
+        img{
+            width: 150px;
+            height: 150px;
+        }
+    }
+
+    .pokemon-img:hover{
+        margin-left: -15px;
+    }
+
+    .pokemon-types{
+        display: flex;
+    }
+
+    .pokemon-type-text{
+        margin-right: 10px;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-weight: 800;
+        color: #fff;
+    }
+
+    .card-body{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .card-top{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 5px 0;
+        color: rgb(255, 255, 255);
+    }
+
+    .card-bottom, .card-top{
+        margin: 0 25px;
+    }
+
+    .types{
+        text-align: start;
+    }
+
+    .card-top h3{
+        text-transform: capitalize;
+    }
+
+`
