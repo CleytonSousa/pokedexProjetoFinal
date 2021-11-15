@@ -43,6 +43,7 @@ const Categorias = () => {
             <NavMenu />
             {load ? <Load /> :
                 <Container>
+                    <h1>Escolha o tipo de pokémon</h1>
                     <TypeBtn>
                         <button id="fire"
                         onClick={() => {
@@ -92,11 +93,11 @@ const Categorias = () => {
                             setLoad(true)
                         }}>Ghost</button>
 
-                        <button id="whater"
+                        <button id="water"
                         onClick={() => {
                             setType(11)
                             setLoad(true)
-                        }}>Wather</button>
+                        }}>Water</button>
 
                         <button id="grass"
                         onClick={() => {
@@ -104,7 +105,7 @@ const Categorias = () => {
                             setLoad(true)
                         }}>Grass</button>
 
-                        <button id="eletric"
+                        <button id="electric"
                         onClick={() => {
                             setType(13)
                             setLoad(true)
@@ -129,10 +130,12 @@ const Categorias = () => {
                         }}>Fairy</button>
                         
                     </TypeBtn>
+                    
                     {categoria.map((poke) => {
                         return (
                             <section key={poke.name}>
-                                <img 
+                                
+                                {/* <img 
                                 onClick={() => history.push(`/${poke?.id}`)}
                                 style={{cursor: 'pointer'}}
                                 src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
@@ -142,7 +145,7 @@ const Categorias = () => {
                                 <h1>{poke.name}</h1>
                                 {poke.types.map((types, idx) => {
                                     return <Types key={idx} id={types.type.name}>{types.type.name}</Types>;
-                                })}
+                                })} */}
                             </section>
                         )
                     })}
