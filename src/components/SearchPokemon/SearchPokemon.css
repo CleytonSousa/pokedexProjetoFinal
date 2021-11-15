@@ -27,7 +27,9 @@
     border: #ffffff 1px solid;
     padding: 5px;
     font-family: 'Raleway';
-    font-weigh : 500;
+    font-weight : bold;
+    font-size: 18px;
+    color: white;
     
 }
 
