@@ -5,9 +5,11 @@ import { Types } from '../../components/PokeDetails/PokeDetailsStyle'
 import NavMenu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
 import Load from '../../components/LoadScreen/Load'
+// import '../../components/Pokemon/Pokemon.css';
 import {
     Container,
-    TypeBtn
+    TypeBtn,
+    PokemonCard
 } from './CategoriasStyle'
 import { useHistory } from 'react-router'
 
@@ -131,24 +133,42 @@ const Categorias = () => {
                         
                     </TypeBtn>
                     
-                    {categoria.map((poke) => {
-                        return (
-                            <section key={poke.name}>
-                                
-                                {/* <img 
-                                onClick={() => history.push(`/${poke?.id}`)}
-                                style={{cursor: 'pointer'}}
-                                src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
-                                alt='a foto desse pokemon não foi encontrada na api'
-                                title={`O lendario ${poke.name}`}
-                                />
-                                <h1>{poke.name}</h1>
-                                {poke.types.map((types, idx) => {
-                                    return <Types key={idx} id={types.type.name}>{types.type.name}</Types>;
-                                })} */}
-                            </section>
-                        )
-                    })}
+                    <section className="pokedexGrid">
+
+                        {categoria.map((poke) => {
+                            return (
+                                <PokemonCard key={poke.name}>
+
+                                    <div className="areaPokemon">
+                                        <img 
+                                            onClick={() => history.push(`/${poke?.id}`)}
+                                            style={{cursor: 'pointer'}}
+                                            src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
+                                            alt='O pokémon ainda não saiu do ovo'
+                                            title={`O lendario ${poke.name}`}
+                                        />
+                                    </div>
+                                    <div className="card-body">
+                                        <div className="card-top">
+                                            <h3>{poke.name}</h3>
+                                        </div>
+                                        <div className='card-bottom'>
+                                            <div className='types pokemon-types'>
+                                                {poke.types.map((types, idx) => {
+                                                    return (
+                                                        <div key={idx} className='pokemon-type-text' id={types.type.name}>
+                                                            {types.type.name}
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </PokemonCard>
+                            )
+                        })}
+                    </section>
                 </Container>}
             <Footer />
         </section>

@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const MenuRocket = styled.nav`
+    grid-template-columns: repeat(4, 2fr);
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -11,8 +12,10 @@ export const MenuRocket = styled.nav`
     position: fixed;
     z-index: 1;
     left: 0;
-    width: 100%;
     top: 0;
+    width: 100vw;
+    /* padding-left: 2%; */
+    
 
     .noShow{
       display: none;
@@ -25,7 +28,7 @@ export const MenuRocket = styled.nav`
     }
     
     .navItem{
-        margin: 0 70px;
+        margin: 0 5%;
         text-decoration: none;
         color: rgb(255, 255, 255);
         font-weight: bold;
@@ -156,16 +159,14 @@ export const MenuRocket = styled.nav`
     }
 
     @media (max-width: 1020px){
+      padding-left: 5%;
+
       #pokebola{
         margin-left: 5%;
       }
     }
 
     @media (max-width: 853px) {
-      a{
-          margin: 0 20px;
-      }
-
       #pokebola{
         margin-left: 3%;
         width: 4%;
