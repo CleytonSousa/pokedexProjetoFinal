@@ -146,6 +146,7 @@ const Categorias = () => {
                                             src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
                                             alt='O pokémon ainda não saiu do ovo'
                                             title={`O lendario ${poke.name}`}
+                                            loading='lazy'
                                         />
                                     </div>
                                     <div className="card-body">
