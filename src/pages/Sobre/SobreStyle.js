@@ -42,6 +42,30 @@ export const Container = styled.section`
       flex-direction: column;
       flex-wrap: wrap;
       align-items: stretch;
+      animation: slide 1s 1;
+
+      @keyframes slide{
+        from{
+          position: absolute;
+          left: 500px;
+        }
+      }
+
+      @media (max-width: 850px){
+          @keyframes slide{
+           0%{
+             opacity: .2;
+           }
+
+           50%{
+             opacity: .5;
+           }
+
+           100%{
+             opacity: .9;
+           }
+          }
+      }
 
       img{
         width: 250px;
@@ -102,10 +126,7 @@ export const Container = styled.section`
           filter: alpha(opacity=50);
           zoom: 1;
         }
-        
-        a:hover {
-          transform: rotateZ(360deg);
-        }
+  
 
       }
     }
@@ -222,7 +243,7 @@ export const Container = styled.section`
       }
     }
 
-     @media (max-width: 345px ) (min-width: 380px){
+     @media (max-width: 345px ){
       .titulo{
         margin-top: 90px;
       }

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import NavMenu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
 import './SobreStyle.js'
@@ -9,17 +9,29 @@ import ImagemPerfil3 from '../../assets/eliza.png'
 import ImagemLinkedin from '../../assets/linkedin.png'
 import ImagemGithub from '../../assets/github.png'
 
+import PokeballClick from '../../components/PokeballClick/PokeballClick'
+
 // IMPORTANDO CONST DO STYLED COMPONENTS
 
 import {
     Container
 } from './SobreStyle.js';
 
+
 function Sobre() {
+    const [name, setName] = useState('flex')
+    const [disp, setDisp] = useState('none')
+
+    setTimeout(() => {
+        setName('none')
+        setDisp('flex')
+    }, 1000)
+
     return (
         <>
             <NavMenu />
-                <Container>
+            <PokeballClick name={name}></PokeballClick>
+                <Container style={{display: disp}}>
                     <header className="titulo">
                         <h1>Sobre a Equipe Rocket</h1>
                         <p>
@@ -70,7 +82,6 @@ function Sobre() {
                             </div>
                         </section>
                     </section>  
-                        
                 </Container>
             <Footer />
         </>    

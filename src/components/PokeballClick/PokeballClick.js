@@ -1,7 +1,7 @@
 import '../PokeballClick/Style.css'
-export function Pokeball(){
+export function Pokeball(props){
     return(
-       <>
+       <section style={{display: props.name}}>
         <div id="ball">
         <div id="bottom-half"></div>
             <div id="top-half">
@@ -11,7 +11,7 @@ export function Pokeball(){
             </div>
         </div>
         </div>
-       </>
+       </section>
     )
 }
 
