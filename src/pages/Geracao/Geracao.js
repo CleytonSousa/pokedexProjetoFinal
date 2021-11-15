@@ -106,7 +106,7 @@ const Geracao = () => {
                                                 <section className="pokemon-img-container">
                                                     {pokemonImageLoad ? <div style={{ textAlign: 'center', paddingBottom: "5px" }}>
                                                         <img style={{ width: '150px', height: '150px', borderRadius: '50px' }}
-                                                            src="https://c.tenor.com/0prLZ4UeNVAAAAAM/pokemon.gif" alt=""
+                                                            src="https://25.media.tumblr.com/tumblr_lvwmhdE0lN1qg0dcvo1_500.gif" alt=""
                                                         />
                                                         <span className="animate-charcter"><LoadingText /></span>
                                                     </div> : <section >

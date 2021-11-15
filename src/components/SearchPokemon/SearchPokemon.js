@@ -8,34 +8,16 @@ function SearchPokemon(){
     const history = useHistory()
     const [search, setSearch] = useState('');
     const [pokemon, setPokemon] = useState();
-    const [id, setId] = useState(Number)
 
     const change = (e) => {
         let buscar = e.target.value.toLowerCase().replace(/\s+/g, '')
-        // console.log(buscar.toLowerCase().trim())
         setSearch(buscar)
     }
 
     const click = async (e) => {
         const data = await searchPokemon(search);
-        // console.log(search)
         setPokemon(data)
         document.getElementById('pokedexContainer').style.display = 'none'
-
-        if(data){
-            if(data.id < 10){
-                setId('00' + data.id)
-            }
-        
-            if(data.id >= 10 && data.id < 100){
-                setId('0' + data.id)
-            }
-
-            if(data.id > 100){
-                setId(data.id)
-            }
-
-        }
 
     if(!data){
         alert(`O pokemon ${search} não pode ser encontrado!`)
@@ -60,7 +42,7 @@ function SearchPokemon(){
         <div  className='pokemon-card' style={{marginTop: '50px'}}>
             <div className="pokemon-img-container">
                 <img
-                    src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`}
+                    src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
                     alt={pokemon.name}
                     className="pokemon-img"
                     onClick={() => history.push(`${pokemon.id}`)}
