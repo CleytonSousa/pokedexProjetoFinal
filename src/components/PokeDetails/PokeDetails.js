@@ -121,7 +121,7 @@ function PokeDetails(props) {
           {pokemon === false && <h1> Pokemon not found</h1>}
     
           {pokemon !== undefined && (
-            <Button variant="contained" onClick={() => history.push("/")}>
+            <Button variant="contained" onClick={() => history.goBack()}>
               X
             </Button>
           )}

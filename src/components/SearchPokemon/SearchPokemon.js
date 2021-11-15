@@ -38,7 +38,7 @@ function SearchPokemon(){
         }
 
     if(!data){
-        alert(`${search} não pode ser encontrado!`)
+        alert(`O pokemon ${search} não pode ser encontrado!`)
     }
     };
 
@@ -60,10 +60,11 @@ function SearchPokemon(){
         <div  className='pokemon-card' style={{marginTop: '50px'}}>
             <div className="pokemon-img-container">
                 <img
-                 src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`}
-                alt={pokemon.name}
-                className="pokemon-img"
-                onClick={() => history.push(`${pokemon.id}`)}/>
+                    src={`https://assets.pokemon.com/assets/cms2/img/pokedex/detail/${id}.png`}
+                    alt={pokemon.name}
+                    className="pokemon-img"
+                    onClick={() => history.push(`${pokemon.id}`)}
+                />
             </div>
            <div className="card-body">
                 <div className="card-top">
