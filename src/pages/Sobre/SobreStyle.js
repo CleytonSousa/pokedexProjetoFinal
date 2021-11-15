@@ -48,11 +48,17 @@ export const Container = styled.section`
         height: 250px;
         display: flex;
         align-self: center;
+      
       }
+
+      .detalhes{
+        transition: width 2s, height 2s, transform 2s;
+      } 
 
       h1{
         display: grid;
         margin: 2%;
+        
         
       }
 
@@ -67,13 +73,40 @@ export const Container = styled.section`
           img{
             width: 50px;
             height: 50px;
+            border: none;
+                      
 
           }
+
+      
         }
 
         a:hover{
           border-bottom: none;
+          transform: scale(1.2);
+          opacity: 0.2;
+          
+            
         }
+
+        a:hover{
+
+          transition:  1s;
+
+        }
+        
+        a:hover{
+
+
+          opacity: 0.6;
+          filter: alpha(opacity=50);
+          zoom: 1;
+        }
+        
+        a:hover {
+          transform: rotateZ(360deg);
+        }
+
       }
     }
   }
@@ -189,7 +222,7 @@ export const Container = styled.section`
       }
     }
 
-     @media (max-width: 349px){
+     @media (max-width: 345px ) (min-width: 380px){
       .titulo{
         margin-top: 90px;
       }
@@ -203,6 +236,7 @@ export const Container = styled.section`
           .redesSociais{
             a{
               display: flex;
+     
             }
           }
         }
