@@ -1,10 +1,20 @@
 import styled from "styled-components";
 
 export const Container = styled.section`
-        display: grid;
+        display: flex;
         grid-template-columns: repeat(4, 2fr);
         grid-gap: 10px;
-        margin: 0 20px;
+        width: 90%;
+        margin-left: 5%;
+        flex-direction: column;
+
+        h1{
+            font-size: 20px;
+            color: #fff;
+            margin-top: 120px;
+            margin-bottom: 0;
+            text-align: center;
+        }
 
         @media (max-width: 959px){
             grid-template-columns: repeat(3, 2fr);
@@ -18,30 +28,38 @@ export const Container = styled.section`
             grid-template-columns: repeat(1, 2fr);
         }
 
-        section{
+        /* section{
             margin-top: 100px;
             background: #9A9795;
             text-align: center;
             border-radius: 15px;
 
-        h1{
-            text-align: center;
-        }
-        img{
-            max-width: 150px;
-            width: 20vw;
-        }
-    }
+            h1{
+                text-align: center;
+            }
+
+            img{
+                max-width: 150px;
+                width: 20vw;
+            }
+        } */
 
     
 `;
 
 export const TypeBtn = styled.section`
+    grid-template-columns: repeat(4, 2fr);
+    display: flex;
+    width: 100%;
+    text-align: center;
+    margin: 2% 0;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
-    button{
-        height: 35px;
-        width: 100px;
-        margin: 5px;
+     button{
+        margin: 8px;
         cursor: pointer;
         border: none;
         border-radius: 15px;
@@ -49,114 +67,89 @@ export const TypeBtn = styled.section`
         font-weight: bolder;
         font-size: 17px;
         text-transform: uppercase;
+        display: flex;
+        padding: 10px !important;
     }
 
-    #fire{
-        background: #FDA015;
-    
+    #fire{   
         :hover{
             background: #fd8115;
         }
     }
 
     #fighting{
-        background: #b01818;
-
         :hover{
             background: #b50707;
         }
     }
 
     #normal{
-        background: #777777;
-
         :hover{
             background: #636363;
         }
     }
 
     #poison{
-        background: #7F18B0;
-
         :hover{
             background: #5f1085;
         }
     }
 
     #ground{
-        background: #B06A18;
-
         :hover{
             background: #9e5e13;
         }
     }
 
     #rock{
-        background: #9F8F8F;
-
         :hover{
             background: #968484;
         }
     }
 
     #bug{
-        background: #B2CA22;
-
         :hover{
             background: #a6bf0d;
         }
     }
 
     #ghost{
-        background: #3B2A51;
-
         :hover{
             background: #462670;
         }
     }
 
-    #whater{
-        background: #15C5FD;
-
+    #water{
         :hover{
             background: #00ace3;
         }
     }
 
     #grass{
-        background: #10B921;
-
         :hover{
             background: #039612;
         }
     }
 
-    #eletric{
-        background: #FEF517;
-
+    #electric{
         :hover{
-            background: #dbd300;
+            background: #FFD700;
         }
     }
 
     #dragon{
-        background: #2D0264;
-
         :hover{
             background: #390180;
         }
     }
 
     #dark{
-        background: #562424;
         :hover{
             background: #401919;
         }
     }
 
     #fairy{
-        background: #F54097;
-        
         :hover{
             background: #fc1e89;
         }

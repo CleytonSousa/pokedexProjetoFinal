@@ -18,7 +18,13 @@ export const MenuRocket = styled.nav`
       display: none;
     }
 
-    a{
+    #img-menu{
+      img{
+        width: 40px;
+      }
+    }
+    
+    .navItem{
         margin: 0 70px;
         text-decoration: none;
         color: rgb(255, 255, 255);
@@ -27,7 +33,7 @@ export const MenuRocket = styled.nav`
         padding-bottom: 5px;
     }
 
-    a:hover{
+    .navItem:hover{
       border-bottom: solid rgb(219, 219, 219) 3px;
       color: rgb(218, 226, 233);
     }
@@ -58,9 +64,23 @@ export const MenuRocket = styled.nav`
           top: 0;
           transform: rotate(90deg);
         }
-      }
+      } 
+    }
 
-      
+    #menu__toggle:checked ~ .menu__btn{
+      #item{
+        transform: rotate(-45deg);
+
+        ::before {
+          top: 0;
+          transform: rotate(0);
+        }
+
+        ::after {
+          top: 0;
+          transform: rotate(-90deg);
+        }
+      }
     }
 
     #menu__toggle:checked ~ .menu__box {
@@ -194,7 +214,7 @@ export const MenuRocket = styled.nav`
       #pokebola{
         width: 8%;
         position: absolute;
-        left: 8%;
+        margin-top: -20px;
       }
   }
 
