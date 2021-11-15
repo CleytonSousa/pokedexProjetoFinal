@@ -24,6 +24,7 @@ export const MenuRocket = styled.nav`
     #img-menu{
       img{
         width: 40px;
+        left: 0;
       }
     }
     
@@ -129,6 +130,7 @@ export const MenuRocket = styled.nav`
 
     .navRespo{
       display: flex;
+      position: absolute;
       flex-direction: column;
       text-align: center;
       padding-bottom: 15px;
@@ -188,6 +190,8 @@ export const MenuRocket = styled.nav`
     }
 
     @media (max-width: 488px) {
+      padding-left: 0;
+
       a{
         display: none;
       }
