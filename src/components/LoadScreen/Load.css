@@ -149,3 +149,9 @@ svg {
     transform: rotate(-720deg);
   }
 }
+
+@media (max-width: 442px) {
+  svg{
+    width: 50vw;
+  }
+}
