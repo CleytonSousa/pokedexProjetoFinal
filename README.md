@@ -7,7 +7,7 @@
 
 <img src="https://cdn.discordapp.com/attachments/898686216306839565/909932780966789170/Pokemon-The-Movie-2000-The-Power-of-One-Meowth-Pikachu-Ash-Ketchum-Jessie-James-1-1.jpg" alt="Equipe rocket" />
 <div>
-  <p>POKÉDEX FEITA POR TRÊS ESTUDANTES DE FRONT-END COM ÊNFASE EM REACT COMO UM PROJETO FINAL (TCC) DO CURSO START RECIFE <br/> você pode ver o nosso site aqui: <a target="_blank" href="https://pokedexequiperocket.online/">CLICK</a>
+  <p>POKÉDEX FEITA POR TRÊS ESTUDANTES DE FRONT-END COM ÊNFASE EM REACT COMO UM PROJETO FINAL (TCC) DO CURSO START RECIFE <br/> você pode ver o nosso site aqui: <a target="_blank" href="https://pokedexequiperocket.online/">CLICK AQUI!</a>
    </p>
 </div>
 
