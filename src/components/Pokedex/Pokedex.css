@@ -7,7 +7,7 @@
     display: grid;
     grid-template-columns: repeat(5, 2fr);
     grid-gap: 10px;
-    padding-bottom: 0;
+    padding-bottom: 130px;
     justify-items: center;
 }
 

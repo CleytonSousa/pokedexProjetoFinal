@@ -232,6 +232,7 @@ export const Container = styled.section`
         display: flex;
         margin-top: 300px;
         height: 850px;
+        padding-bottom: 100px;
 
         .detalhes{
           .redesSociais{
