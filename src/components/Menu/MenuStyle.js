@@ -17,6 +17,11 @@ export const MenuRocket = styled.nav`
     /* padding-left: 2%; */
     
 
+    #active{
+      border-bottom: 3px solid #fff;
+      padding-bottom: 5px;
+    }
+
     .noShow{
       display: none;
     }

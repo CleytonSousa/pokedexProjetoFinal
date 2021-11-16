@@ -80,7 +80,7 @@ const Geracao = () => {
 
     return (
         <section>
-            <NavMenu />
+            <NavMenu geracao="active" />
             <SearchPokemon />
             <main id='pokedexContainer'>
                 {loading ? <Load /> :

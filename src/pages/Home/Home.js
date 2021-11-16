@@ -42,7 +42,7 @@ export default function Home() {
         <section>
             {loading ? <Load /> : //loading
                 <main className="HomePage">
-                    <NavMenu />
+                    <NavMenu home="active" />
                     <SearchPokemon />
                     <Pokedex
                         pokemons={pokemons}
