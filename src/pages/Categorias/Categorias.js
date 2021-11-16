@@ -42,7 +42,7 @@ const Categorias = () => {
 
     return (
         <section>
-            <NavMenu />
+            <NavMenu categorias="active" />
             {load ? <Load /> :
                 <Container>
                     <h1>Escolha o tipo de pokémon</h1>

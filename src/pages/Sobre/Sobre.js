@@ -29,7 +29,7 @@ function Sobre() {
 
     return (
         <>
-            <NavMenu />
+            <NavMenu sobre="active" />
             <PokeballClick name={name}></PokeballClick>
                 <Container style={{display: disp}}>
                     <header className="titulo">
