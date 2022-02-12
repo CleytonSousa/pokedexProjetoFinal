@@ -1,7 +1,6 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { getPokemonData } from '../../server/api'
-import { Types } from '../../components/PokeDetails/PokeDetailsStyle'
 import NavMenu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
 import Load from '../../components/LoadScreen/Load'
@@ -21,7 +20,7 @@ const Categorias = () => {
     const history = useHistory() 
 
 
-    const getFire = async () => {
+    const getTypes = async () => {
         try {
             const data = await axios.get(`https://pokeapi.co/api/v2/type/${type}/`) //fire
             const promise = data.data.pokemon.map(async (pokemon) => {
@@ -37,7 +36,8 @@ const Categorias = () => {
 
 
     useEffect(() => {
-        getFire()
+        getTypes()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [type]);
 
     return (

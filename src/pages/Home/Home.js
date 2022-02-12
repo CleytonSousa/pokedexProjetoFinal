@@ -8,8 +8,6 @@ import Load from '../../components/LoadScreen/Load'
 import './Home.css'
 
 
-
-
 const { useState, useEffect } = React;
 
 export default function Home() {
@@ -37,6 +35,7 @@ export default function Home() {
 
     useEffect(() => {
         fetchPokemons();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [page]);
     return (
         <section>

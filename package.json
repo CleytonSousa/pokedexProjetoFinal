@@ -17,7 +17,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --silent --coverage",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
@@ -39,6 +39,7 @@
     ]
   },
   "devDependencies": {
-    "styled-components": "^5.3.3"
+    "styled-components": "^5.3.3",
+    "jest": "26.6.0"
   }
 }

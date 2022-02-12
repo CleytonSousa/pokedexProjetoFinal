@@ -43,7 +43,7 @@ function PokeDetails(props) {
 
 
       const generatePokemonJSX = (pokemon) => {
-        const { name, id, species, height, weight, types } = pokemon;
+        const { name, id, height, weight, types } = pokemon;
         const fullImageUrl = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
         return (
           

@@ -66,6 +66,7 @@ const Geracao = () => {
         setTimeout(() => {
             setPokemonImageLoad(false)
         }, 4000);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [gerId])
 
     function next() {
