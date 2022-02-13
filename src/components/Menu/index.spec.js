@@ -3,7 +3,7 @@ import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min'
 import NavMenu from './Menu'
 
 describe('<NavMenu />', () => {
-    it('should render geração page', () => {
+    it('should render the geração page', () => {
         render(
         <BrowserRouter>
             <NavMenu geracao="active" />
@@ -17,7 +17,7 @@ describe('<NavMenu />', () => {
         expect(button).toHaveStyle('border-bottom: 3px solid #fff;')
     })
 
-    it('should render categorias page', () => {
+    it('should render the categorias page', () => {
         render(
         <BrowserRouter>
             <NavMenu categorias="active" />
@@ -31,7 +31,7 @@ describe('<NavMenu />', () => {
         expect(button).toHaveStyle('border-bottom: 3px solid #fff;')
     })
 
-    it('should render sobre page', () => {
+    it('should render the sobre page', () => {
         render(
         <BrowserRouter>
             <NavMenu sobre="active" />
