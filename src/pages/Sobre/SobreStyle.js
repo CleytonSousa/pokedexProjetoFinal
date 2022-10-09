@@ -43,6 +43,10 @@ export const Container = styled.section`
       flex-wrap: wrap;
       align-items: stretch;
       animation: slide 1s 1;
+      
+      .imgPerfil-link{
+        border-radius: 50%;
+      }
 
       @keyframes slide{
         from{

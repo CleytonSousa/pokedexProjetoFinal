@@ -7,7 +7,22 @@
 .input-field{
     animation: fadeIn ease 2s;
     display: flex;
-    margin-top: 50%;
+    margin-top: 30%;
+}
+
+@media (max-width: 380px)
+{
+    .input-field{
+        display: block;
+    }
+    .butons-holder{
+        justify-content: center;
+        display: flex;
+        margin-top: 10px;
+    }
+    #btn-search, #reload-all{
+        padding: 8px;
+    }
 }
 
 @keyframes fadeIn{
@@ -26,7 +41,7 @@
     outline: none;
     border: #ffffff 1px solid;
     padding: 5px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', serif;
     font-weight : bold;
     font-size: 18px;
     color: white;
@@ -45,10 +60,26 @@
     margin-bottom: 1px;
     cursor: pointer;
     margin-left: 10px;
-    font-family: 'Raleway';
+    font-family: 'Raleway', serif;
     font-weight: 700;
 }
 
+#reload-all{
+    border: none;
+    width: 100px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-family: 'Raleway', serif;
+    font-weight: 500;
+}
+#btn-search, #reload-all{
+    padding: 10px;
+}
+
 #btn-search:hover{
+    background: rgb(185, 185, 185);
+}
+#reload-all:hover{
     background: rgb(185, 185, 185);
 }

@@ -28,6 +28,7 @@
 
 .pokemon-types{
     display: flex;
+    margin-bottom: 60px;
 }
 
 .pokemon-type-text{
