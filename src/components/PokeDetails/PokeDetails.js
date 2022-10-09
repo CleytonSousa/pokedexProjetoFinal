@@ -43,8 +43,8 @@ function PokeDetails(props) {
 
 
       const generatePokemonJSX = (pokemon) => {
-        const { name, id, species, height, weight, types } = pokemon;
-        const fullImageUrl = `https://cdn.traction.one/pokedex/pokemon/${id}.png`;
+        const { name, height, weight, types } = pokemon;
+        const fullImageUrl = pokemon.sprites.front_default;
         return (
           
           <Container>
@@ -127,6 +127,6 @@ function PokeDetails(props) {
           )}
         </>
       );
-};
+}
 
 export default PokeDetails

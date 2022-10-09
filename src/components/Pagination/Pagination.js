@@ -8,13 +8,13 @@ export const Pagination = (props) => {
 
     return (
         <Container>
-            <section>
+            <section id="seta-esquerda">
                 <button onClick={onLeftClick}>
                     <img src={setaEsquerda} alt="" />
                 </button>
             </section>
             <section>{page} de {totalPages}</section>
-            <section>
+            <section id="seta-direita">
                 <button onClick={onRightClick}>
                     <img src={setaDireita} alt="" />
                 </button>

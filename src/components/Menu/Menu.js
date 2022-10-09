@@ -15,20 +15,20 @@ function NavMenu(props){
     return(
         <>
             <MenuRocket>
-                <Link className="navItemRespo" id="img-menu" to='/'>
+                <Link className="navItemRespo" id="img-menu" to='/home'>
                     <img id="pokebola" src={pokebola} alt="menu" />
                 </Link>
 
                 {/* Menu responsivo */}
                 <div className={active ? 'navRespo' : 'noShow'} id="navRespo">
-                    <Link id={props.home} className="navItemRespo navItem" to="/">HOME</Link>
+                    <Link id={props.home} className="navItemRespo navItem" to="/home">HOME</Link>
                     <Link id={props.geracao} className="navItemRespo navItem" to="/geracao">GERAÇÃO</Link>
                     <Link id={props.categorias} className="navItemRespo navItem" to='/categorias'>CATEGORIA</Link>
                     <Link id={props.sobre} className="navItemRespo navItem" to='/sobre'>SOBRE</Link> 
 
                 </div>
 
-                    <Link id={props.home} className="navItem" to="/">HOME</Link>
+                    <Link id={props.home} className="navItem" to="/home">HOME</Link>
                     <Link id={props.geracao} className="navItem" to="/geracao">GERAÇÃO</Link>
                     <Link id={props.categorias} className="navItem" to='/categorias'>CATEGORIA</Link>
                     <Link id={props.sobre} className="navItem" to='/sobre'>SOBRE</Link>

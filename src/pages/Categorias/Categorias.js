@@ -1,11 +1,9 @@
 import axios from 'axios'
 import React, { useState, useEffect } from 'react'
 import { getPokemonData } from '../../server/api'
-import { Types } from '../../components/PokeDetails/PokeDetailsStyle'
 import NavMenu from '../../components/Menu/Menu'
 import Footer from '../../components/Footer/Footer'
 import Load from '../../components/LoadScreen/Load'
-// import '../../components/Pokemon/Pokemon.css';
 import {
     Container,
     TypeBtn,
@@ -143,7 +141,7 @@ const Categorias = () => {
                                         <img 
                                             onClick={() => history.push(`/${poke?.id}`)}
                                             style={{cursor: 'pointer'}}
-                                            src={`https://cdn.traction.one/pokedex/pokemon/${poke.id}.png`} 
+                                            src={poke.sprites.front_default}
                                             alt='O pokémon ainda não saiu do ovo'
                                             title={`O lendario ${poke.name}`}
                                             loading='lazy'

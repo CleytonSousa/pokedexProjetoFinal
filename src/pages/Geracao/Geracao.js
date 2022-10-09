@@ -112,7 +112,7 @@ const Geracao = () => {
                                                     </div> : <section >
                                                         <img
                                                             onClick={() => history.push(`/${pokemon?.id}`)}
-                                                            src={`https://cdn.traction.one/pokedex/pokemon/${pokemon?.id}.png`}
+                                                            src={pokemon.sprites.front_default}
                                                             alt='esse pokemon não foi encontrado na api'
                                                             loading='lazy'
                                                             className="pokemon-img" />

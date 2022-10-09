@@ -12,7 +12,7 @@ const Pokemon = (props) => {
                 click ? setClick(false) : setClick(true)
             }}>
                 <img
-                    src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
+                    src={pokemon.sprites.front_default}
                     alt='Esse pokemon não pode ser encontrado'
                     loading='lazy'
                     className="pokemon-img"

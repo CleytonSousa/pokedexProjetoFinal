@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { searchPokemon } from "../../server/api";
 import '../SearchPokemon/SearchPokemon.css'
 import '../Pokemon/Pokemon.css'
@@ -14,18 +14,19 @@ function SearchPokemon(){
         setSearch(buscar)
     }
 
-    const click = async (e) => {
+    const click = async () => {
         const data = await searchPokemon(search);
         setPokemon(data)
         document.getElementById('pokedexContainer').style.display = 'none'
 
     if(!data){
         alert(`O pokemon ${search} não pode ser encontrado!`)
+        window.location.reload();
     }
     };
 
     return(
-        <div>
+        <div className="search-container">
         
         <main className="app-container">
             <div style={{display: 'block'}}>
@@ -35,14 +36,17 @@ function SearchPokemon(){
                         placeholder="Pesquise o pokémon"
                         onChange={change}
                     />
-                    <button id="btn-search" onClick={click}>Go!</button>
+                    <div className="butons-holder">
+                        <button id="btn-search" onClick={click}>Go!</button>
+                        <button onClick={() => window.location.reload()} id="reload-all">Ver todos</button>
+                    </div>
                 </div>
             <div>
     {pokemon &&
         <div  className='pokemon-card' style={{marginTop: '50px'}}>
             <div className="pokemon-img-container">
                 <img
-                    src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
+                    src={pokemon.sprites.front_default}
                     alt={pokemon.name}
                     className="pokemon-img"
                     onClick={() => history.push(`${pokemon.id}`)}
