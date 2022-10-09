@@ -14,7 +14,7 @@ function Routes() {
         <div>
             <BrowserRouter>
                 <Switch>
-                    <Route path='/home' exact component={Home} />
+                    <Route path='/' exact component={Home} />
                     <Route path='/sobre' component={Sobre} />
                     <Route path='/geracao' component={Geracao} />
                     <Route path="/categorias" component={Categorias}/>

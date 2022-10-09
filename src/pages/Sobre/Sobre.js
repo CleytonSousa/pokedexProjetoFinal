@@ -4,7 +4,6 @@ import Footer from '../../components/Footer/Footer'
 import './SobreStyle.js'
 
 import ImagemPerfil1 from '../../assets/Barbaha.png'
-import ImagemPerfil2 from '../../assets/cleyton.png'
 import ImagemPerfil3 from '../../assets/eliza.png'
 import ImagemLinkedin from '../../assets/linkedin.png'
 import ImagemGithub from '../../assets/github.png'
@@ -55,7 +54,7 @@ function Sobre() {
                         </section>
 
                         <section className="detalhes">
-                            <img className="imgPerfil" src={ImagemPerfil2} alt=""/>
+                            <img className="imgPerfil-link" src={"https://avatars.githubusercontent.com/u/83567005?v=4"} alt=""/>
                             <h1>Cleyton Sousa</h1>
                             <div className="redesSociais">
                                 <a rel="noreferrer" href="https://github.com/CleytonSousa" target="_blank" className="icon">
